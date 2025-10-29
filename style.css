@@ -37,67 +37,113 @@ body {
     padding: 0;
 }
 
-header.main-header {
-    background-color: var(--secondary-bg-color);
-    color: var(--text-color);
-
-    display: flex;
-    flex-wrap: wrap; /* Making sure it wraps inside and doesn't overflow */
-    align-items: center;
-    padding: 15px 0;
-    min-height: 100px;
-
-    h1 {
-        font-family: var(--font-family);
-        font-weight: 800;
-        font-size: 2rem;
-        margin-left: 50px;
-    }
-
-    nav {
-
-        li {
-            list-style: none;
-            text-transform: uppercase;
-
-            a {
-                font-weight: 800;
-                text-decoration: none;
-                color: var(--text-color);
-                transition: color 0.3s;
-            }
-
-            a:hover {
-                text-decoration: solid;
-                color: #d1aff5;
-            }
-        }
-
-    }
-}
-
 img {
     display: block;
-    max-width: 100%;
+    max-inline-size: 100%; /* Makes sure the image is 100% size of the parent aka what it's inside of */
 }
 
-section {
+/* section {
     display: grid;
     place-items: center;
     align-content: center;
     min-height: auto;
+} */
+
+/* Wrapper/Container: Ensuring the margins on both side are equal and the max inline(logical)/width is 1,000 pixels */
+.wrapper {
+    max-inline-size: 62.5rem;
+    margin-inline: auto;
 }
 
-section.home-section {
-
+header {
+    display: flex;
+    flex-wrap: wrap; /* Making sure it wraps inside and doesn't overflow */
+    justify-content: space-between;
+    border: 5px dotted red;
 }
 
-section.about-section {
-
+.main-header {
+    color: var(--text-color);
+    /* padding: 15px 0; */
+    min-height: 100px;
 }
 
-section.work-section {
+.main-header h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 2rem;
+    /* margin-left: 25px; */
+}
 
+.primary-navigation ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-navigation a {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible {
+    text-decoration: solid;
+    color: #f5dec0;
+}
+
+.home-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85); /* Dark overlay for better text visibility */
+    z-index: 0;
+}
+
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+
+    background-image: url("./assets/images/bocchi_streetpose.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid blue;
+}
+
+.home-section h2 {
+    color: #b97ab5;
+}
+
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+
+    background-image: url("./assets/images/bocchi_chilling.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border: 5px dashed pink;
+}
+
+.work-section {
+    border: 5px dotted green;
 }
 
 footer {
@@ -114,6 +160,8 @@ footer {
     p {
         margin-left: 25px;
     }
+
+    border: 5px dashed orange;
 }
 
 /* .hidden {
