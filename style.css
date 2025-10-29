@@ -1,0 +1,130 @@
+/* Root used for CSS variables */
+:root {
+    --font-family: 'Albert Sans', sans-serif;
+    --primary-bg-color: #b97ab5;
+    --secondary-bg-color: #986f9b;
+    --text-color: #ffffff;
+}
+
+/* Hiding the scrollbar for webkit-based browsers such as Chrome and Safari */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(10, 10, 10, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    border-radius: 10px;
+}
+
+html {
+    scrollbar-width: none; /* Only used for Firefox */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 1.5;
+
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+
+    margin: 0;
+    padding: 0;
+}
+
+header.main-header {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+
+    display: flex;
+    flex-wrap: wrap; /* Making sure it wraps inside and doesn't overflow */
+    align-items: center;
+    padding: 15px 0;
+    min-height: 100px;
+
+    h1 {
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 2rem;
+        margin-left: 50px;
+    }
+
+    nav {
+
+        li {
+            list-style: none;
+            text-transform: uppercase;
+
+            a {
+                font-weight: 800;
+                text-decoration: none;
+                color: var(--text-color);
+                transition: color 0.3s;
+            }
+
+            a:hover {
+                text-decoration: solid;
+                color: #d1aff5;
+            }
+        }
+
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: auto;
+}
+
+section.home-section {
+
+}
+
+section.about-section {
+
+}
+
+section.work-section {
+
+}
+
+footer {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+
+    padding: 15px 0;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+
+    text-align: center;
+
+    p {
+        margin-left: 25px;
+    }
+}
+
+/* .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+} */
