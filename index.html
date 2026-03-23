@@ -1,206 +1,1064 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="viewport-fit=auto, width=device-width, initial-scale=1">
-        <meta name="darkreader-lock">
-        <meta name="color-scheme" content="dark light">
-        <meta name="robots" content="index, follow">
-        <meta name="referrer" content="no-referrer">
-        <meta name="format-detection" content="telephone=no">
 
-        <link rel="shortcut icon" type="image/png" sizes="180x180" href="/shortcut-icon.png"> <!-- favicons on old edge/IE browsers -->
-        <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico"> <!-- favicons for general browsers -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <!-- used on iOS devices -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="viewport-fit=auto, width=device-width, initial-scale=1">
+    <meta name="darkreader-lock">
+    <meta name="color-scheme" content="dark light">
+    <meta name="robots" content="index, follow">
+    <meta name="referrer" content="no-referrer">
+    <meta name="format-detection" content="telephone=no">
 
-        <title> Hi! - cue </title>
-        <meta name="title" content="Cue's Site">
-        <meta name="description" content="hewwo!!,,">
-        <meta name="language" content="en">
-        <meta name="author" content="Scarlett">
-        <meta name="theme-color" content="#966fc3">
-        <meta name="keywords" content="portfolio, personal website, personal webpage, web developer, programmer, game developer, translator, community manager, content creator">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
 
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Cue's Site">
-        <meta property="og:url" content="https://cue.cat">
-        <meta property="og:title" content="Cue's Site">
-        <meta property="og:description" content="hewwo!!,,">
-        <meta property="og:image" content="https://msaku.pages.dev/assets/images/oldschoolsaku_headshot_cloucri.png">
-        <meta property="og:locale" content="en_US">
+    <title>Hi! — cue</title>
 
-        <meta name="twitter:creator" content="@MafuSaku">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:url" content="https://cue.cat">
-        <meta name="twitter:title" content="Cue's Site">
-        <meta name="twitter:description" content="hewwo!!,,">
-        <meta name="twitter:image" content="https://msaku.pages.dev/assets/images/oldschoolsaku_headshot_cloucri.png">
-        <meta name="revisit-after" content="7 days">
+    <meta name="title" content="Cue's Site">
+    <meta name="description" content="hewwo!!,,">
+    <meta name="language" content="en">
+    <meta name="author" content="Scarlett">
+    <meta name="theme-color" content="#c490d1" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#d4a4e8" media="(prefers-color-scheme: dark)">
+    <meta name="keywords"
+        content="portfolio, personal website, personal webpage, web developer, programmer, game developer, translator, community manager, content creator, ambassador, contributor">
 
-        <meta name="application-name" content="Cue's Site">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="msapplication-TileImage" content="icon.png">
+    <!-- Open Graph (used by Discord, Facebook, Slack, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cue's Site">
+    <meta property="og:url" content="https://cue.cat">
+    <meta property="og:title" content="Cue's Site">
+    <meta property="og:description" content="hewwo!!,,">
+    <meta property="og:image" content="https://cue.cat/assets/icons/cuewieLogo.webp">
+    <meta property="og:locale" content="en_US">
 
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=albert-sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet" />
+    <!-- Twitter / X Card -->
+    <meta name="twitter:creator" content="@MafuSaku">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://cue.cat">
+    <meta name="twitter:title" content="Cue's Site">
+    <meta name="twitter:description" content="hewwo!!,,">
+    <!-- SWAP: Replace with your actual Twitter card image URL -->
+    <meta name="twitter:image" content="https://cue.cat/assets/icons/cuewieLogo.webp">
+    <meta name="revisit-after" content="7 days">
 
-        <link rel="stylesheet" href="/style.css">
-    </head>
+    <!-- PWA & App meta -->
+    <meta name="application-name" content="Cue's Site">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileImage" content="favicon-192x192.png">
 
-    <body>
-        <header class="main-header">
-            <img src="" alt="">
-            <h1>Cue's space</h1>
+    <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+    <link href="https://fonts.bunny.net/css?family=albert-sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
 
-            <nav class="primary-navigation" aria-label="Primary Navigation">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#findme">Find Me</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <section id="home" class="home-section">
-                <div class="wrapper">
-                    <img src="" alt="">
-                    <h2>Hey, I'm cue!</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolor vitae ea officia obcaecati architecto aut possimus nostrum veritatis nesciunt!</p>
-                </div>
-            </section>
-    
-            <section id="about" class="about-section">
-                <div class="wrapper">
-                    <h2>About Me</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloremque nostrum quidem ipsum maiores iste ex distinctio. Ipsum, doloribus quibusdam?</p>
-                    <img src="" alt="">
-                </div>
-            </section>
-    
-            <section id="work" class="work-section">
-                <div class="wrapper">
-                    <h2>Work and Contributions</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi vitae harum aspernatur.</p>
-                    <img src="" alt="">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 
-                    <h3>Lead Researcher at Roblox_RTC on X</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2023 to Now</p>
-                    <img src="" alt="">
+<body>
+    <!-- ============================================================
+         SKIP LINK — Accessibility: lets keyboard/screen-reader users
+         jump straight to the page content, skipping the header nav.
+         ============================================================ -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-                    <h3>Ambassador at Roblox</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2026 to Now</p>
-                    <img src="" alt="">
-                    
-                    <h3>Co-Founder at Roblox Thailand Community & Network (RTCN)</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2024 to Now</p>
-                    <img src="" alt="">
-
-                    <h3>Management at Sriwisa Group</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2024 to Now</p>
-                    <img src="" alt="">
-
-                    <h3>Content Moderator at Sawhorse Productions</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2024 to Now</p>
-                    <img src="" alt="">
-
-                    <h3>Intern at Thailand Postr</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2023 to Early 2024</p>
-                    <img src="" alt="">
-
-                    <h3>Community Translator at Roblox</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2022 to Now</p>
-                    <img src="" alt="">
-
-                    <h3>Translator for Specter</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2022 to Late 2023</p>
-                    <img src="" alt="">
-
-                    <h3>Quality Assurance Volunteer at Dubit</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Since 2022 to Now</p>
-                    <img src="" alt="">
-
-                    <h3>Advisor and Content Moderator at Metaverse Gaming League (MGL)</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2021 to Now</p>
-                    <img src="" alt="">
-
-                    <h3>Translator for Free Draw!</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Since 2021 to Now</p>
-                    <img src="" alt="">
-                </div>
-            </section>
-
-            <section id="findme" class="findme-section">
-                <div class="wrapper">
-                    <h2>Find Me</h2>
-                    <p>You can find me on these services</p>
-
-                    <img src="" alt="">
-                    <p>GitHub</p>
-                    
-                    <img src="" alt="">
-                    <p>X / Twitter</p>
-                    
-                    <img src="" alt="">
-                    <p>Roblox</p>
-                    
-                    <img src="" alt="">
-                    <p>YouTube</p>
-                    
-                    <img src="" alt="">
-                    <p>VODs YouTube Channel</p>
-                    
-                    <img src="" alt="">
-                    <p>Twitch</p>
-
-                    <img src="" alt="">
-                    <p>Bluesky</p>
-
-                </div>
-            </section>
-        </main>
+    <!-- ============================================================
+         HEADER / STICKY NAV
+         Contains the site branding and primary navigation.
+         The header becomes "frosted glass" on scroll (via JS scroll class).
+         ============================================================ -->
+    <header class="main-header" role="banner">
         
-        <footer>
-            <div class="footer-banner">
-                <img src="" alt="">
-                <p>cue's kitty house</p>
-                <p>&copy; <span id="year"></span> cue.cat</p>
+        <div class="header-brand">
+            <img class="header-icon" src="/assets/icons/header/chibicuewie.webp" alt="Cuewie Icon" width="32" height="32" aria-hidden="true" loading="eager">
+            <span class="header-name" aria-label="cue's site">cue</span>
+        </div>
 
-                <div class="footer-icons">
-                    <img src="" alt="">
-                    <p>Throne</p>
-                    
-                    <img src="" alt="">
-                    <p>Ko-fi</p>
-                    
-                    <img src="" alt="">
-                    <p>Pronouns Page</p>
-                    
-                    <img src="" alt="">
-                    <p>Marshmallow-Qa</p>
+        <nav class="primary-navigation" aria-label="Primary navigation">
 
-                    <p>imood</p>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme">
+                <!-- Sun icon (shown in dark mode, click to go light) -->
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    aria-hidden="true" class="icon-sun" viewBox="0 0 24 24" width="20" height="20">
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                        d="M12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+                <!-- Moon icon (shown in light mode, click to go dark) -->
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    aria-hidden="true" class="icon-moon" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79" />
+                </svg>
+            </button>
+
+            <!-- Navigation links -->
+            <ul role="list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#findme">Find Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://medium.com/@mafusaku">Blog</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- home/hero section -->
+        <section id="home" class="home-section" aria-label="Introduction">
+            <div class="wrapper">
+                <div class="hero-layout">
+
+                    <!-- Left: greeting, cycling name, tagline, meta -->
+                    <div class="hero-text">
+
+                        <p class="hero-greeting">
+                            Hi, I'm
+                            <!-- Name cycler: script.js cycles through these every ~2s -->
+                            <span class="name-cycler" aria-label="Cue, also known as Scarlett or Saku">
+                                <span class="name-item" aria-hidden="true">Cue</span>
+                                <span class="name-item" aria-hidden="true">Scarlett</span>
+                                <span class="name-item" aria-hidden="true">Saku</span>
+                            </span>
+                        </p>
+
+                        <!-- Tagline to describe myself -->
+                        <p class="hero-tagline">and I'm a jack of all trades</p>
+
+                        <!-- Country flags (emoji) and timezone -->
+                        <div class="hero-meta" aria-label="Location and timezone">
+                            <span class="hero-flag" role="img" aria-label="United States (US) flag">🇺🇸</span>
+                            <span class="hero-flag" role="img" aria-label="Thailand flag">🇹🇭</span>
+                            <span class="hero-timezone">GMT+7</span>
+                        </div>
+
+                    </div><!-- /hero-text -->
+
+                    <!-- Right: circular avatar image -->
+                    <div class="hero-avatar-wrap">
+                        <img class="hero-avatar" src="/assets/icons/header/chibicuewie.webp" alt="Cue's profile photo" width="260" height="260"
+                            loading="eager" fetchpriority="high" decoding="async">
+                    </div>
+
+                </div><!-- /hero-layout -->
+            </div><!-- /wrapper -->
+        </section>
+
+        <!-- About section / Layout: left text + right rounded-corner image -->
+        <section id="about" class="about-section" aria-labelledby="about-heading">
+            <div class="wrapper">
+                <div class="about-layout">
+
+                    <!-- Left: heading + description -->
+                    <div class="about-text">
+                        <h2 id="about-heading">About</h2>
+
+                        <p>
+                            <ruby>こんにちは!<rt>Konnichiwa!</rt></ruby> I'm cue! I'm a jack of all trades and I'm based in Thailand.
+                            I do a crap ton of things: I do game dev, community management, translation, writing, yapping, getting out my comfort zone, and MORE.
+                            I am pretty shy and introverted, but I will become your bestest friend! I become extroverted in situations where I'm most comfortable in, that involves people too!
+                            I love doing what I do and I can only continue doing it! I hyperfixate on things, I <b>lock in</b>. I also do some vtubing, streaming, and just about anything really!
+                            (~˘▾˘)~
+                        </p>
+                        <p>
+                            I'm a tech nerd! I love doing everything and anything tech. That would be learning new things, self-teaching (like how I always do!), or finding awesome tech creators to follow!
+                            I know a lot but may not be able to do a lot, but that's totally okay! I try and do my best with everything I go for ^_^
+                            Toodaloo~
+                        </p>
+                    </div>
+
+                    <!-- Right: rounded-corner image -->
+                    <div class="about-image-wrap">
+                        <img class="about-image" src="/assets/icons/main/cuewie-ref.webp" alt="Cuewie's character reference sheet" width="320" height="320" loading="lazy" decoding="async">
+                    </div>
+
+                </div><!-- /about-layout -->
+            </div><!-- /wrapper -->
+        </section>
+
+        <!-- ============================================================
+           WHAT I DO SECTION
+           Each .skill-row has: description text on left + animated
+           stat counter on right. The counter starts at 0 and counts
+           up to data-target when scrolled into view.
+           ============================================================ -->
+        <section id="whatido" class="whatido-section" aria-labelledby="whatido-heading">
+            <div class="wrapper">
+                <h2 id="whatido-heading">What I do</h2>
+
+                <div class="skills-grid">
+
+                    <!-- Skill row 1
+                 SWAP: Change the text and data-target number for each row.
+                 data-target = the final number the counter counts up to.
+                 data-suffix = optional suffix after the number (e.g. "+") -->
+                    <div class="skill-row">
+                        <div class="skill-description">
+                            <strong class="skill-name">Contributions Reached</strong>
+                            <p>Work on the Roblox platform and elsewhere with everything I do</p>
+                        </div>
+                        <div class="stat-block" aria-label="550 plus million users">
+                            <span class="stat-number" data-target="550" data-suffix="+">0</span>
+                            <span class="stat-label">million users</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill row 2 -->
+                    <div class="skill-row">
+                        <div class="skill-description">
+                            <strong class="skill-name">Translation</strong>
+                            <p>Thai-English game and content localization for major platforms.</p>
+                        </div>
+                        <div class="stat-block" aria-label="3000 plus strings translated">
+                            <span class="stat-number" data-target="3000" data-suffix="+">0</span>
+                            <span class="stat-label">strings translated</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill row 3 -->
+                    <div class="skill-row">
+                        <div class="skill-description">
+                            <strong class="skill-name">Community Management</strong>
+                            <p>Growing and moderating online communities across platforms.</p>
+                        </div>
+                        <div class="stat-block" aria-label="10 communities">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">communities</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill row 4 -->
+                    <div class="skill-row">
+                        <div class="skill-description">
+                            <strong class="skill-name">Cats owned</strong>
+                            <p>Meow meows I've owned</p>
+                        </div>
+                        <div class="stat-block" aria-label="0 cats">
+                            <span class="stat-number" data-target="0">0</span>
+                            <span class="stat-label">:(</span>
+                        </div>
+                    </div>
+
+                </div><!-- /skills-grid -->
+            </div><!-- /wrapper -->
+        </section>
+
+        <!-- ============================================================
+           WORK AND CONTRIBUTIONS SECTION — CSS Scroll Carousel
+           Cards snap into place on scroll. Indicators (♦ diamonds)
+           show how many cards there are and which ones are visible.
+           ============================================================ -->
+        <section id="work" class="work-section" aria-labelledby="work-heading">
+
+            <div class="wrapper">
+                <h2 id="work-heading">Work and Contributions</h2>
+            </div>
+
+            <!-- Carousel lives outside .wrapper so it can be full-width -->
+            <div class="carousel-outer">
+
+                <!-- Carousel prev/next arrow buttons -->
+                <div class="carousel-controls" aria-label="Carousel navigation">
+                    <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Scroll to previous cards">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-btn--next" type="button" aria-label="Scroll to next cards">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
                 </div>
 
-            </div>
-        </footer>
+                <!-- Scroll-snapping track of work cards -->
+                <div class="carousel-track" role="region" aria-label="Work and contributions carousel" tabindex="0">
 
-        <script src="/script.js"></script>
-    </body>
+                    <!-- ======================================================
+                 WORK CARD TEMPLATE
+                 SWAP: Duplicate this <article> block for each job.
+                 Update: card image, title, date range, description,
+                 and the link icons at the bottom.
+                 ====================================================== -->
+
+                    <!-- Card 1 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/RTC-logo.webp" alt="Roblox_RTC icon image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Lead Researcher at Roblox_RTC</h3>
+                                <p class="card-date">
+                                    <time datetime="2023-03">Mar 2023</time> — Present
+                                </p>
+                            </div>
+                            <!-- Native <details> element — expands/collapses without JS! -->
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I researched and fact-checked information related to the Roblox community and all things Roblox.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://x.com/Roblox_RTC" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Roblox_RTC on X (opens in new tab)">
+                                    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/Roblox-Tagline.webp" alt="Roblox logo image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Ambassador at Roblox</h3>
+                                <p class="card-date">
+                                    <time datetime="2026-02">Feb 2026</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I helped with the second Thailand creator meetup (in-person) in Bangkok in October 2025. As a volunteer ambassador for Roblox in Thailand, I support the growth of the local developer and player community. I do this by building partnerships, organizing events, and contributing to community-driven initiatives. My role involves empowering creators and strengthening the Thai Roblox ecosystem, while also maintaining updates on community activities, news, and public engagement.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://about.roblox.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Roblox profile (opens in new tab)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 302.7 302.7" width="18" height="18">
+                                        <path
+                                            d="M120.5 271.7C9.6 243.1.5 240.7.6 240.2.7 239.6 62.1.5 62.2.4c0 0 54 13.8 119.9 30.8S302.1 62 302.2 62c.2 0 .2.4.1.9-.2 1.5-61.5 239.3-61.7 239.5 0 .1-54.1-13.7-120.1-30.7M174.9 158c3.2-12.6 5.9-23.1 6-23.4.1-.5-2.3-1.2-23.2-6.6-12.8-3.3-23.5-5.9-23.6-5.8-.3.3-12.1 46.6-12 46.7.2.2 46.7 12.2 46.8 12.1 0-.1 2.7-10.4 6-23"
+                                            style="fill:#fff" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/RTCN-logo.webp" alt="RTCN logo image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Co-Founder at RTCN</h3>
+                                <p class="card-date">
+                                    <time datetime="2025-01">Jan 2025</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>RTCN is an organization dedicated to bringing Thai Roblox players together, supporting various initiatives, and organizing events to strengthen community connections. We are passionate about the Roblox platform and the Metaverse. The organization focuses on developing and promoting communication within the Roblox Thailand community, with most activities and events managed through Facebook.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://www.robloxthailand.com?ref=cuecat" target="_blank" rel="noopener noreferrer"
+                                    aria-label="RTCN community (opens in new tab)">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/sriwisagroup-logo.webp" alt="Sriwisa Group logo image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Management at Sriwisa Group</h3>
+                                <p class="card-date">
+                                    <time datetime="2024-10">Oct 2024</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I helped manage the Facebook page as well as support inquiries from messages received on the page. I also helped with some graphic and UI work for promotional content.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://sriwisa.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Sriwisa Group (opens in new tab)">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                                        <rect width="20" height="14" x="2" y="7" rx="2" />
+                                        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/sawhorse-logo.webp" alt="Sawhorse Production logo image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Content Moderator at Sawhorse Productions</h3>
+                                <p class="card-date">
+                                    <time datetime="2024-09">Sep 2024</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I am a community moderator for <a href="https://discord.com/invite/walmartdiscovered" target="_blank">Walmart Discovered</a>, which is Walmart's Roblox game. I ensure member safety and civility, as well as communication amongst the team.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://sawhorsela.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Sawhorse Productions (opens in new tab)">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                                        <path d="m23 7-7 5 7 5z" />
+                                        <rect width="15" height="14" x="1" y="5" rx="2" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/ThailandPost_Logo.webp" alt="Thailand Post logo image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Intern at Thailand Post</h3>
+                                <p class="card-date">
+                                    <time datetime="2023-10">Oct 2023</time> —
+                                    <time datetime="2024-01">Feb 2024</time>
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>Customer service, backend tracking, paperwork, post office stuff.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://www.thailandpost.co.th" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Thailand Post (opens in new tab)">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <path d="m22 6-10 7L2 6" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/Roblox-Tagline.webp" alt="Roblox tagline image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Community Translator at Roblox</h3>
+                                <p class="card-date">
+                                    <time datetime="2022-07">Jul 2022</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I'm part of Roblox's beta program and also this program, which is a localization program created by Roblox's Developer Relations team. In this program, we suggest features, offer feedback on Roblox's translation tools, features, and products, and share opinions and insightful knowledge with the Roblox localization team.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://about.roblox.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Roblox (opens in new tab)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 302.7 302.7" width="18" height="18">
+                                        <path
+                                            d="M120.5 271.7C9.6 243.1.5 240.7.6 240.2.7 239.6 62.1.5 62.2.4c0 0 54 13.8 119.9 30.8S302.1 62 302.2 62c.2 0 .2.4.1.9-.2 1.5-61.5 239.3-61.7 239.5 0 .1-54.1-13.7-120.1-30.7M174.9 158c3.2-12.6 5.9-23.1 6-23.4.1-.5-2.3-1.2-23.2-6.6-12.8-3.3-23.5-5.9-23.6-5.8-.3.3-12.1 46.6-12 46.7.2.2 46.7 12.2 46.8 12.1 0-.1 2.7-10.4 6-23"
+                                            style="fill:#fff" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 8 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/specter-game.webp" alt="Specter game image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Translator for Specter</h3>
+                                <p class="card-date">
+                                    <time datetime="2022-06">Jun 2022</time> —
+                                    <time datetime="2023-12">Dec 2023</time>
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I translated the Roblox horror game Specter (also known as Specter 2 on launch). I've translated the game from English to Thai, localizing the game for the Thai Roblox community. This was a fun and challenging project.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://www.roblox.com/games/8267733039" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Specter on Roblox (opens in new tab)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 302.7 302.7" width="18" height="18">
+                                        <path
+                                            d="M120.5 271.7C9.6 243.1.5 240.7.6 240.2.7 239.6 62.1.5 62.2.4c0 0 54 13.8 119.9 30.8S302.1 62 302.2 62c.2 0 .2.4.1.9-.2 1.5-61.5 239.3-61.7 239.5 0 .1-54.1-13.7-120.1-30.7M174.9 158c3.2-12.6 5.9-23.1 6-23.4.1-.5-2.3-1.2-23.2-6.6-12.8-3.3-23.5-5.9-23.6-5.8-.3.3-12.1 46.6-12 46.7.2.2 46.7 12.2 46.8 12.1 0-.1 2.7-10.4 6-23"
+                                            style="fill:#fff" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 9 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 377.36 76.79" width="340" height="190">
+                                <defs>
+                                    <linearGradient id="a" x1="-5.62" x2="59.93" y1="5.62" y2="71.17" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#ff6b35" />
+                                        <stop offset=".04" stop-color="#fa593f" />
+                                        <stop offset=".13" stop-color="#f03952" />
+                                        <stop offset=".2" stop-color="#eb255e" />
+                                        <stop offset=".25" stop-color="#e91e63" />
+                                        <stop offset=".5" stop-color="#ff1393" />
+                                        <stop offset=".75" stop-color="#9c27b0" />
+                                        <stop offset="1" stop-color="#00b4d8" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M38.23 46.13 0 46.19V30.72l38.23-.06c4.27 0 7.74 3.46 7.74 7.74s-3.46 7.74-7.74 7.74Zm38.57-7.74C76.81 17.19 59.62 0 38.41 0H0v15.36h38.41c12.72 0 23.04 10.31 23.04 23.04S51.14 61.44 38.41 61.44H0V76.8h38.41c21.21 0 38.4-17.19 38.4-38.4Z"
+                                    style="fill:url(#a);stroke-width:0" />
+                                <path
+                                    d="M117.08 14.36h21.47c15.46 0 26.06 9.32 26.06 23.63s-10.6 23.63-26.06 23.63h-21.47zm20.93 38.28c9.38 0 15.53-5.6 15.53-14.65s-6.14-14.65-15.53-14.65h-9.99v29.3zm45.26-11.81V14.36h10.94v26.06c0 8.98 3.92 12.69 10.53 12.69s10.53-3.71 10.53-12.69V14.36h10.8v26.47c0 13.91-7.97 21.6-21.4 21.6s-21.4-7.7-21.4-21.6m106.14 7.9c0 8.17-6.48 12.9-18.9 12.9h-24.44V14.36h23.09c11.81 0 17.89 4.93 17.89 12.29 0 4.73-2.43 8.37-6.28 10.4 5.27 1.69 8.64 5.74 8.64 11.68M256.94 22.6v11.14h10.87c5.33 0 8.24-1.89 8.24-5.6s-2.9-5.54-8.24-5.54zm21.47 24.98c0-3.98-3.04-5.87-8.71-5.87h-12.76v11.68h12.76c5.67 0 8.71-1.76 8.71-5.81m28.8-33.22h10.94v47.26h-10.94zm44.1 8.91h-15.12v-8.91h41.18v8.91h-15.12v38.35h-10.94z"
+                                    style="stroke-width:0;fill:#fff" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">QA Volunteer at Dubit</h3>
+                                <p class="card-date">
+                                    <time datetime="2022-05">May 2022</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I was a volunteer QA at Dubit, testing various Roblox games and projects that the company created or collaborated on with another entity. I provided feedback, insights, and suggestions to the company and its partners.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://dubit.io" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Dubit (opens in new tab)">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                                        <rect width="9" height="9" x="2" y="2" rx="1" />
+                                        <rect width="9" height="9" x="13" y="2" rx="1" />
+                                        <rect width="9" height="9" x="2" y="13" rx="1" />
+                                        <rect width="9" height="9" x="13" y="13" rx="1" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 10 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/mgl-logo.webp" alt="MGL banner image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Advisor & Moderator at MGL</h3>
+                                <p class="card-date">
+                                    <time datetime="2021-06">Jun 2021</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I joined the first-ever MGL event back in 2021 through Roblox advertisements. I was heavily involved and then proceeded to apply and become an advisor and server moderator for MGL. I answer questions, escalate issues, communicate closely with the team, and ensure the server is fun and safe for all users.</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://mgl.co" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Metaverse Gaming League (opens in new tab)">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                                        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 11 -->
+                    <article class="work-card">
+                        <div class="card-image-wrap">
+                            <img src="/assets/icons/main/work-contributions/freedraw-game.webp" alt="Free Draw game image" width="340" height="190" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3 class="card-title">Translator for Free Draw!</h3>
+                                <p class="card-date">
+                                    <time datetime="2021-04">Apr 2021</time> — Present
+                                </p>
+                            </div>
+                            <details class="card-details">
+                                <summary>Description</summary>
+                                <p>I've translated the Roblox game from English to Thai, providing localization to the Thai community of Free Draw. My translations can even be spotted on a Thai creator's <a href="https://www.youtube.com/watch?v=gkLWsMZLbxY" target="_blank">YouTube video</a>!</p>
+                            </details>
+                            <div class="card-links" aria-label="Related links for this role">
+                                <a href="https://www.roblox.com/games/1547610457" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Free Draw on Roblox (opens in new tab)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 302.7 302.7" width="18" height="18">
+                                        <path
+                                            d="M120.5 271.7C9.6 243.1.5 240.7.6 240.2.7 239.6 62.1.5 62.2.4c0 0 54 13.8 119.9 30.8S302.1 62 302.2 62c.2 0 .2.4.1.9-.2 1.5-61.5 239.3-61.7 239.5 0 .1-54.1-13.7-120.1-30.7M174.9 158c3.2-12.6 5.9-23.1 6-23.4.1-.5-2.3-1.2-23.2-6.6-12.8-3.3-23.5-5.9-23.6-5.8-.3.3-12.1 46.6-12 46.7.2.2 46.7 12.2 46.8 12.1 0-.1 2.7-10.4 6-23"
+                                            style="fill:#fff" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div><!-- /carousel-track -->
+
+                <!-- Diamond indicators — auto-generated by script.js -->
+                <div class="carousel-indicators" role="group" aria-label="Carousel position indicators"></div>
+
+            </div><!-- /carousel-outer -->
+        </section>
+
+        <!-- ============================================================
+           FIND ME SECTION
+           A responsive grid of social platform links.
+           ============================================================ -->
+        <section id="findme" class="findme-section" aria-labelledby="findme-heading">
+            <div class="wrapper">
+                <h2 id="findme-heading">You can find me on</h2>
+
+                <ul class="social-grid" role="list">
+
+                    <li>
+                        <a class="social-link" href="https://www.github.com/mafusaku" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.6 9.6 0 0 1 12 6.844a9.6 9.6 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2" />
+                                </svg>
+                            </span>
+                            <span class="social-name">GitHub</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://x.com/MafuSaku" target="_blank" rel="noopener noreferrer"
+                            aria-label="X / Twitter (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </span>
+                            <span class="social-name">X / Twitter</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://x.com/scardayoo" target="_blank" rel="noopener noreferrer"
+                            aria-label="Secondary X / Twitter (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </span>
+                            <span class="social-name">Secondary X / Twitter</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://www.roblox.com/share?code=0d22a0bf55305a4ca0d622407814cd96&type=Profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Roblox profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 302.7 302.7" width="24" height="24">
+                                        <path
+                                            d="M120.5 271.7C9.6 243.1.5 240.7.6 240.2.7 239.6 62.1.5 62.2.4c0 0 54 13.8 119.9 30.8S302.1 62 302.2 62c.2 0 .2.4.1.9-.2 1.5-61.5 239.3-61.7 239.5 0 .1-54.1-13.7-120.1-30.7M174.9 158c3.2-12.6 5.9-23.1 6-23.4.1-.5-2.3-1.2-23.2-6.6-12.8-3.3-23.5-5.9-23.6-5.8-.3.3-12.1 46.6-12 46.7.2.2 46.7 12.2 46.8 12.1 0-.1 2.7-10.4 6-23"
+                                            style="fill:#fff" />
+                                    </svg>
+                            </span>
+                            <span class="social-name">Roblox</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://www.youtube.com/@mafusaku" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube channel (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z" />
+                                </svg>
+                            </span>
+                            <span class="social-name">YouTube</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://www.youtube.com/@cuewielive" target="_blank" rel="noopener noreferrer"
+                            aria-label="VODs YouTube Channel (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z" />
+                                </svg>
+                            </span>
+                            <span class="social-name">VODs Channel</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://twitch.tv/mafusaku" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitch channel (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0 1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z" />
+                                </svg>
+                            </span>
+                            <span class="social-name">Twitch</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://bsky.app/profile/scarlett.cue.cat" target="_blank" rel="noopener noreferrer"
+                            aria-label="Bluesky profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364q.204-.03.415-.056-.207.033-.415.056c-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a9 9 0 0 1-.415-.056q.21.026.415.056c2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.299-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8" />
+                                </svg>
+                            </span>
+                            <span class="social-name">Bluesky</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://marshmallow-qa.com/axp5i0090hot9ya" target="_blank" rel="noopener noreferrer"
+                            aria-label="Marshmallow profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="265.504 142.199 310.882 310.882" width="24" height="24">
+                                    <path fill="#4d4d4d"
+                                        d="M426.211 155.584c-16.425-13.286-30.518-16.747-49.759-10.087-18.659 6.459-40.045 20.439-63.628 44.022-23.584 23.584-37.563 44.969-44.022 63.628-6.66 19.241-3.199 33.334 10.087 49.76 22.263 27.522 45.613 50.231 69.782 69.781 16.425 13.286 30.518 16.747 49.759 10.087 18.659-6.458 40.044-20.439 63.628-44.022 23.584-23.584 37.563-44.969 44.022-63.628 6.66-19.241 3.199-33.334-10.087-49.759-19.551-24.169-42.259-47.519-69.782-69.782" />
+                                    <path fill="#fff"
+                                        d="M350.036 226.731c-18.786 19.154-34.774 30.709-51.477 37.719-2.675 1.122-4.709 4.6-3.27 8.517 2.017 5.488 5.524 5.674 8.218 4.948 15.801-4.259 38.176-20.476 57.707-40.006 22.417-22.417 37.296-43.933 44.225-63.954 1.391-4.017 2.336-7.802 2.856-11.436 3.35 1.844 6.815 4.296 10.568 7.376 24.039 19.721 43.215 38.583 62.819 62.818 11.895 14.706 14.554 24.893 8.166 40.92-6.634 16.64-19.708 34.783-38.917 53.992-19.209 19.21-37.353 32.283-53.993 38.917-16.027 6.39-26.296 3.832-40.92-8.165-24.098-19.771-43.096-38.78-62.818-62.819-11.997-14.624-14.555-24.893-8.166-40.92 6.634-16.64 19.708-34.783 38.917-53.992s37.353-32.283 53.992-38.917c7.614-3.035 13.671 1.174 10.891 9.198-5.037 14.538-18.026 34.625-38.798 55.804" />
+                                    <path fill="#4d4d4d" fill-rule="evenodd"
+                                        d="M414.078 404.376c-3.208 3.209-2.518 5.333-.35 7.501l39.361 39.36c2.168 2.168 4.292 2.86 7.501-.349s2.517-5.333.349-7.502l-39.359-39.36c-2.168-2.168-4.293-2.859-7.502.35m113.603-113.603c-3.209 3.209-2.518 5.333-.35 7.501l39.36 39.36c2.168 2.169 4.293 2.859 7.501-.35s2.518-5.333.35-7.501l-39.36-39.36c-2.168-2.168-4.292-2.858-7.501.35m-52.668 60.935c-3.208 3.208-2.518 5.333-.35 7.501l39.361 39.359c2.168 2.168 4.292 2.86 7.501-.349s2.517-5.333.349-7.501l-39.359-39.361c-2.169-2.168-4.293-2.858-7.502.351m-130.328-67.146c-4.759 4.758-4.759 12.474 0 17.231 4.759 4.759 12.474 4.759 17.232 0 4.758-4.757 4.758-12.473 0-17.231s-12.473-4.759-17.232 0" />
+                                    <path fill="#f8b193" fill-rule="evenodd"
+                                        d="M360.628 328.056c-5.396 5.396-5.396 14.144 0 19.539 5.396 5.397 14.144 5.397 19.539 0 5.396-5.395 5.396-14.143 0-19.539-5.395-5.396-14.143-5.396-19.539 0m90.733-71.194c5.396 5.396 14.144 5.396 19.539 0s5.396-14.144 0-19.539c-5.395-5.396-14.143-5.396-19.539 0-5.396 5.395-5.396 14.143 0 19.539" />
+                                    <path fill="#4d4d4d" fill-rule="evenodd"
+                                        d="M425.098 238.612c4.759-4.758 4.759-12.474 0-17.232-4.759-4.759-12.474-4.759-17.232 0-4.758 4.758-4.758 12.474.001 17.232 4.757 4.758 12.472 4.758 17.231 0m8.425 71.234c10.186-10.187 12.199-25.9.17-36.732-1.997-1.799-4.524-1.616-6.429.546-3.788 4.302-6.298 8.613-13.805 16.121-7.508 7.508-11.82 10.018-16.122 13.806-2.162 1.904-2.344 4.432-.546 6.428 10.833 12.029 26.546 10.017 36.732-.169" />
+                                    <path fill="#e56e62" fill-rule="evenodd"
+                                        d="M428.914 305.235c-3.522 3.522-9.243 6.42-12.84 5.824-.477-.079-.818-.447-.839-.93-.178-4.123 2.112-9.314 5.685-12.887 3.574-3.574 8.765-5.864 12.887-5.686.484.021.852.362.931.84.595 3.597-2.302 9.317-5.824 12.839" />
+                                </svg>
+                            </span>
+                            <span class="social-name">Marshmallow QnA</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://throne.com/cuewie" target="_blank" rel="noopener noreferrer"
+                            aria-label="Throne profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1192 1004" width="24" height="24">
+                                    <path fill="#ae11e3" stroke="#ae11e3"
+                                        d="M410.5 336q3.3-1.1 2.5 1.5l4 2.5q-1.1 2.7 1.5 2l1.5 4 5 3.5v1.5h2q-1.1 2.7 1.5 2l2.5 1 3.5 6 5.5 4.5q-.7 2.3 1.5 1.5l6 7 1.5-.5q-1.1 3.3 1.5 2.5l4.5 2.5-2 1 4.5 3.5h2.5q-.7 4.7 3.5 6l2.5 1.5-.5 1.5 3.5 1.5 1.5 2.5q2.3-.7 1.5 1.5l3 1.5q-1 3 2 2v2.5h2l1.5 2.5 2.5 1.5q-.7 2.6 2 1.5v3h2.5l2.5 1.5-1 1 3.5 3.5q3-.8 1.5 3h3q-1.1 2.7 1.5 2l3 5 1.5-.5.5 1.5q1.2-2.2 2.5.5-2.3 1.3.5 2.5l3.5 2.5 4 6.5 2.5-1 1 3 1.5-.5 3 5.5 4 1 .5 3 1-2 4 7 1-2q-.2 4.7 3 6l1.5-.5 2.5 4.5 1.5-.5q-.7 2.3 1.5 1.5v2l2.5 1.5 2 3 6 4.5 1.5 3h2.5q-1.5 3.7 1.5 3l2.5 1 2.5 5 2.5.5-.5 1.5 2.5 1.5.5 1.5 1.5-.5 1.5 3.5 1.5-.5q-2.2 1.3.5 2.5l3.5 2.5q-.7 2.3 1.5 1.5l3.5 5q3.7-1.5 3 1.5l3 4.5 2-.5-.5-1.5q2.8 1.3.5 2.5l.5 1.5 1.5-.5q-.8 3 3 1.5v2.5l4.5 4.5 1.5-.5 1 4.5 2.5 1q1.3-2.2 2.5.5l3.5 5.5h1.5v3h3q-1.5 3.7 1.5 3l3.5 2.5.5 1.5 1.5-.5q-1.1 3.3 1.5 2.5l3.5 2.5-.5 1.5q2.3-.7 1.5 1.5l3 1-1 1 6.5 6.5 3 2 1.5 3 2 .5q-2.2 1.3.5 2.5l1.5-.5.5 1.5 1.5-.5-.5 1.5q2.3-.7 1.5 1.5l5 3.5 2.5 4 4.5 3.5 1.5 2.5 4.5 2.5-.5 1.5 2.5 1.5 1.5 2.5 4 3 1.5-.5-1 2q1.2 3.3 5 2.5-1.5 3.7 1.5 3l4.5 3q-1.5 3.8 1.5 3l3.5 2v3q2.7-1.1 2 1.5l3 1-.5 1.5 2-1-.5 1.5q-.7 2.3 1.5 1.5v2l5.5 1.5-1 2.5h2q-1.1 2.7 1.5 2l2 3h2q2.6-.8 1.5 2.5l2 3.5 5 2 .5 2 1.5-.5-1 1 4.5 4.5 1.5-.5-1 2.5 3 1.5 1 2-46.5 47.5-.5-2q-2.7 1.1-2-1.5l-3-1.5q1.1-2.7-1.5-2l-4.5-6q-2.7 1.1-2-1.5l-3-1q2.8-1.7-1.5-3.5l-5.5-4.5.5-1.5-4.5-1.5q2.8-1.7-1.5-3.5H651v-2q-2.7 1.1-2-1.5l-5-4V660h-2q1.1-2.7-1.5-2l-4-5-3-2-3.5-2v-3h-2q1.1-2.7-1.5-2l-5.5-4-5.5-7-2.5-1.5-2-3-4-2.5-2-5-4-1.5q.7-2.6-2-1.5v-3h-1.5l-3.5-2-4.5-6-1.5-.5.5-1.5q-2.6.7-1.5-2h-3v-1.5l-5-4q.8-2.2-1.5-1.5l-1.5-3-3-1.5q2.3-1.2-.5-2.5-4 .5-4.5-2.5l-4-5-4-2.5-1.5-3-1.5-.5.5-1.5-3.5-1.5.5-1.5H552v-2h-2q1.1-2.7-1.5-2l-2.5-4-4-2.5q.8-2.2-1.5-1.5l-4-6-1.5.5V552h-2q1.1-2.7-1.5-2l-1.5-3-3-1.5-2.5-3.5-2.5-1.5q.8-2.2-1.5-1.5l-5-6H514v-2q-2.7 1.1-2-1.5l-5-4-2-3-6-5q.8-2.2-1.5-1.5l-5-6-3-2-5.5-7h-2q1.1-2.7-1.5-2l-2.5-1.5.5-1.5-2.5-1.5-2.5-3.5-3-2-2.5-4q-2.7 1.1-2-1.5h-2l-2-4.5-5-3.5-.5-1.5-1.5.5-2-4.5h-3q1.1-2.7-1.5-2l-3-4H444v-2q-2.7 1.1-2-1.5l-4-3 .5-1.5-9.5-7.5-1.5-2.5q-2.2.8-1.5-1.5l-3-1.5-.5-3-1.5.5-.5-2.5-1.5.5-1.5-2.5-2.5-1.5-2-3-4-2.5v-2h-2v-2h-2q1.1-2.7-1.5-2l-7-8q-2.2.8-1.5-1.5l-3-1.5-1.5-3-5.5-4.5V403h-2q1.1-2.7-1.5-2l-2.5-4.5 28-56zm377 374 6.5 4 1.5 4q2.3-.7 1.5 1.5l4 1.5 1.5 5 1.5-.5q-.7 2.3 1.5 1.5l5.5 7q2.7-1.1 2 1.5l5 3-.5 1.5h2.5q-1 3 2 2v2.5l3 1.5v2h2q-1.1 2.7 1.5 2l2.5 4 3 1.5 2 3h2l2.5 4.5q2.3-.7 1.5 1.5l7 6q-.7 2.6 2 1.5v2h2v2.5q2-1.7 4 2l1.5 2.5 7.5 5 2 5 3 .5q-2.2 1.3.5 2.5l4 3 1.5-.5-1 2.5h2q-1.1 2.7 1.5 2l3.5 1.5h-2q-.7 2.6 2 1.5v2h2.5v2l2-1 2 5 7 6 1.5-.5-1 2.5q2.7-1.1 2 1.5h2l1.5 2.5 1.5.5-.5 1.5q3.3-1.1 2.5 1.5l4 3 1.5 2.5 3 2 1 3 4.5 2 .5 2 1.5-.5v2l1.5 2.5q3.3-1.1 2.5 1.5h2l-.5 1.5 2.5.5-.5 1.5 2.5 1.5 2 3 4.5 4.5h2.5q-.7 4.7 3.5 6l2.5 1.5-.5 1.5q3.3-1.1 2.5 1.5l4 2.5 2 4h2.5v2q2.3-.7 1.5 1.5l5 3.5q-1.1 2.7 1.5 2l1.5 3q2.7-1.1 2 1.5l3 1-.5 1.5q2.6-.7 1.5 2h3v1.5l3 1-1 2 3 1.5v2q2.7-1.1 2 1.5l3 1.5q-1.1 2.7 1.5 2l1.5 3 5 2.5-.5 1.5q2.3-.7 1.5 1.5l5 3q-1.1 3.3 1.5 2.5l13 13h1.5l2.5 5q1.3-2.2 2.5.5-10.6 24.9-30.5 40.5l-16 10-1.5-4-3-1.5q.8-2.2-1.5-1.5l-2.5-1.5.5-1.5-5-4-4-5-2.5-1.5q.8-2.2-1.5-1.5l-1.5-3h-1.5l-9.5-9.5q.8-2.2-1.5-1.5l-4.5-3-3.5-6-3.5-2.5V942h-2q1.1-2.7-1.5-2l-6.5-8h-3q1.5-3.8-1.5-3l-1.5-3q-3 1-2-2h-3v-1.5l-1.5-2.5-1.5.5.5-1.5q-2.2.8-1.5-1.5h-2l-1-3.5-6-3.5.5-1.5-3.5-2.5q.8-2.6-2.5-1.5l-1.5-4-5-2q1.5-3.7-1.5-3l-4.5-3-1-4-6-3-1.5-4-1.5.5q.8-2.2-1.5-1.5l-1.5-4q-3.8 1.5-3-1.5l-4.5-5.5-1.5.5q.8-2.2-1.5-1.5l-5-6q-2.2.8-1.5-1.5l-6-5-2-3-3-1.5-1.5-3-3-2-1.5-3-4-2.5-1.5-2.5-3-2-4-5-1.5.5-8.5-10.5q-2.2.8-1.5-1.5l-3-1q2.8-1.7-1.5-3.5l-7-6-3.5-2-2.5-4-1.5-.5 1-1-3.5-3.5-3.5-1q1.5-3.7-1.5-3l-1.5-3-4-2.5q.8-2.2-1.5-1.5l-4.5-6q-2.7 1.1-2-1.5h-2l-2.5-3.5-2.5-1.5.5-1.5-3.5-1.5-2.5-3.5-3.5-2.5-2-3-7-6 44.5-45.5z"
+                                        opacity=".996" />
+                                    <path fill="#c118ca" stroke="#c118ca"
+                                        d="m442 272 4.5 2 1.5-.5q-2.2 1.3.5 2.5 2.3-.7 1.5 1.5l9 7.5 1 4 3 1.5q-.7 2.3 1.5 1.5l2.5 1 1.5 3 3 2q3.7 2 2 4l2.5 1.5.5 1.5q1.8-2.7 3.5 1.5-.7 2.3 1.5 1.5v2q2.3-.7 1.5 1.5h2l1 2-.5 1.5q4.4-1.5 3.5 1.5l4 3 2 3 1 2.5 6 3 .5 2 1.5-.5-1 2 4 1.5 3 6h3q-1.1 2.7 1.5 2l5 7q1.3-2.3 2.5.5l-.5 1.5 5.5 4.5q-.7 2.3 1.5 1.5l3.5 1.5-2 1 5 3q-.7 2.3 1.5 1.5l1.5 3 2.5-1q-1.6 1.8 1.5 3.5-.7 2.3 1.5 1.5l1.5 3h2q-1.1 2.7 1.5 2l4.5 6 3 .5-.5 1.5 5.5 4.5 1.5 2.5q3.3-1.1 2.5 1.5l9.5 10.5q2.3-.7 1.5 1.5l3 1q-2.2 1.3.5 2.5 2.6-.7 1.5 2h3v1.5l3 2-.5 1.5 4.5 2.5v1.5h2q-1.1 2.7 1.5 2l3 5 1.5-.5-.5 1.5 2.5 1.5v1.5q3.8-1.5 3 1.5l3 4.5 4 1.5-.5 1.5 3.5 1 1.5 3 4.5 3.5 5.5 6.5q2.3-.7 1.5 1.5l2 3.5q3.8-1.5 3 1.5l3 1.5v2h2q-1.1 2.7 1.5 2l2 4 1.5-.5q-1.1 3.3 1.5 2.5l5.5 4.5 5.5 6.5 3.5 2.5 3.5 4.5 3 2 3 4q2.6-.7 1.5 2h2v1.5l3 1.5 3.5 5 5.5 4.5 1.5 2.5q2.6-.7 1.5 2h2v2h3v2.5h2l.5 2.5 1.5-.5v2.5h2v2q2.7-1.1 2 1.5l3 1.5v2q2.7-1.1 2 1.5h2l-.5 1.5 2.5.5-.5 1.5 3.5 2.5.5 1.5 1.5-.5v2.5q2.7-1.1 2 1.5l6 5 .5 1.5 1.5-.5-.5 1.5 2.5 1.5 2.5 3.5 2.5.5-.5 1.5q2.6-.7 1.5 2h2.5l1 3 3.5 2.5 1.5 2.5 3 2 1.5 3 5 2q-1.5 3.7 1.5 3l4 5 1.5-.5q-2.2 1.3.5 2.5 2.3-.7 1.5 1.5h2q-.7 2.3 1.5 1.5l4 5 1.5.5-.5 1.5 4 3 1.5-.5q-2.2 1.3.5 2.5 2.3-.7 1.5 1.5l2 3-47.5 48.5q-2.2.8-1.5-1.5l-3-1.5-6-9-5-2-2-6-2.5 1-3-4H704v-2q-2.7 1.1-2-1.5l.5-1.5-5.5-1.5.5-1.5-3-2-2.5-4h-2q1.5-3.7-1.5-3l-3.5-2q1.5-3.7-1.5-3l-1.5.5q2.8-1.8-1.5-3.5-3 .7-1.5-3h-2.5l-5-6-1.5.5.5-1.5-2.5-1.5-1.5-2.5-1.5-.5.5-1.5-5.5-3.5-.5-1.5-1.5.5q2.8-1.7-1.5-3.5l-3.5-2.5q.8-2.2-1.5-1.5l-3.5-5-3-1.5-.5-1.5q-1.2 2.3-2.5-.5l.5-1.5q-2.2.8-1.5-1.5l-3-1.5q1.1-2.7-1.5-2l-8.5-8.5V550l-2-.5.5-1.5-4.5-2-.5-3-1.5.5-1.5-2.5-3.5-1v-3h-3q1.5-3.7-1.5-3l-5-7h-2q-2.2.8-1.5-1.5l-1.5-3.5-1 1-4.5-4.5V516q-3.7 1.5-3-1.5h-2l-2-3-3-4.5q-3.7 1.5-3-1.5l-5-3.5-2.5-4-3.5-2.5-1.5-3.5-1.5.5-1.5-2.5-1.5-.5.5-1.5-3.5-1.5-1-3.5-4-1q1.7-4.1-2.5-3l-1.5-3-6-4.5-2-3-3-2 .5-1.5q-2.2.8-1.5-1.5l-3-1-1.5-3.5q-1.7 2.8-3.5-1.5l-.5-3.5-1 2-4-7-1 2-.5-3-4-1-3.5-6-1.5.5-.5-2.5-2.5 1-6.5-9-2.5-1.5q2.3-1.2-.5-2.5l-1.5.5-.5-1.5-1.5.5-2.5-4.5q-2.6.7-1.5-2h-3q1.5-3.8-1.5-3-4.8-2.5-3-5l-4.5-1v-3q-2.7 1.1-2-1.5l-4-3-.5-1.5-1.5.5V400h-2q1.1-2.7-1.5-2l-1.5-3-3-1.5-1.5-2.5-2.5-.5q2.2-1.2-.5-2.5l-4.5-3.5q1.3-3.7-2.5-2.5l-4.5-3.5 2-1-6-2.5-.5-3-1.5.5-5.5-6.5q-2.2.8-1.5-1.5l-8-7-1-3.5-4-1v-2q-2.7 1.1-2-1.5h-2q2.8-1.8-1.5-3.5-2.6.8-1.5-2.5l-3-1.5q1.1-2.7-1.5-2l-2.5-4-3.5 1 .5-1.5zm394.5 387v2l1.5.5q-2.2 1.3.5 2.5l3.5 1.5-.5 1.5 4.5 3.5v1.5q3.8-1.5 3 1.5l5 4-.5 1.5q2.3-.7 1.5 1.5l3 1.5v2q2.7-1.1 2 1.5l6 4-.5 1.5h2.5v3q3-1 2 2h2.5v2q3.3-1.1 2.5 1.5l3 1.5q-1.5 3.8 1.5 3l3.5 2.5 2.5 3.5q2.3-.7 1.5 1.5l5 3.5 3 6h2q-1.1 2.7 1.5 2l4.5 6 3 .5-.5 1.5 3.5 2.5v1.5q3.8-1.5 3 1.5l4 2.5.5 3 1.5-.5-1 2 1.5.5 1.5-.5 1.5 2.5 1.5.5-.5 1.5 2.5.5-.5 1.5h2.5q-1.7 4.1 2.5 3l5 6 2-1-.5 1.5 3.5 5.5 8.5 6v2q2.7-1.1 2 1.5l3 1.5 2.5 4 3 2 1 3 3.5 1.5 2.5 3.5 2 1 1.5-.5q-2.5 1.5 1 3-.7 2.3 1.5 1.5l1.5 3q3-1 2 2h3v1.5l1 2.5 3 1.5 1.5 2.5 5 4 2.5 1 1.5 4 1.5-.5q-2.2 1.3.5 2.5 3.3-1.1 2.5 1.5l2 3.5h2q-1.1 2.7 1.5 2l1.5 3q4.1-1.7 3 2.5l5.5 5.5 2.5.5-.5 1.5 2.5 1.5.5 1.5 1.5-.5.5 2.5 1.5-.5 1.5 3.5 3.5 2.5q-.7 2.3 1.5 1.5v2l2-1v2q2.3-.7 1.5 1.5l4 2q-.8 2.6 2.5 1.5v1q-2.2-.7-1.5 1.5 2-1.7 4 2-.7 2.3 1.5 1.5 2.3.8 1.5 4.5l-17 60-4 10.5-2.5-1-1.5.5-2-4.5-16-13-1.5-4-3.5-1.5q.8-2.2-1.5-1.5v-2l-4.5-2-1.5-3-3-2-1.5-3h-2q1.1-2.7-1.5-2l-3.5-6h-3q1.1-2.7-1.5-2l-2.5-4q-2.7 1.1-2-1.5l-3-1.5q1.1-2.7-1.5-2l-3.5-5-2-.5.5-1.5H955v-2h-2q1.1-2.7-1.5-2l-2.5-4-3-.5q2.3-1.2-.5-2.5l-4.5-3.5q1.3-3.7-2.5-2.5l-4.5-6q-2.7 1.1-2-1.5l-3-2 .5-1.5-3.5-1.5q.8-2.6-2.5-1.5l-3.5-6-6-3.5.5-1.5-3-2-3-4-2.5-1.5q.8-2.6-2.5-1.5v-2l-2.5-1.5-.5-1.5-1.5.5-2-3-9-8-.5-3.5-2 1v-2H883v-2q-2.7 1.1-2-1.5l-3-1.5v-2q-2.7 1.1-2-1.5l-6-5 .5-1.5q-3.3 1.1-2.5-1.5l-2-3.5-9-6.5-2.5-3.5-1.5.5V774h-2v-2q-2.7 1.1-2-1.5l-7-6q.8-2.2-1.5-1.5l-3-5-1.5.5-2-3-3-1.5-2.5-4-5-4-1.5-4q-3 1-2-2h-2.5v-2q-4 .5-4.5-2.5l-2-3-7-5.5-.5-2-1.5.5-1-4.5-4-1.5q.8-2.2-1.5-1.5l-1.5-4-6.5-4-2.5 1.5z"
+                                        opacity=".996" />
+                                    <path fill="#e76c5e" stroke="#e76c5e"
+                                        d="M588.5 0q20.2-2.2 26.5 9.5l228 447 7 22 1 22-1.5 6.5-6.5-5v-2q-3 1-2-2h-3v-1.5l-1.5-2.5-1.5.5q2.3-1.2-.5-2.5l-3.5-2.5-2-3h-2l-1-3.5-6-4.5q.8-2.2-1.5-1.5l-9-10-4.5-2.5-1.5-3.5-3.5-1q1.1-2.7-1.5-2v-2l-3.5-1-2.5-5-1.5.5-1-3.5h-2q1.1-2.7-1.5-2l-3.5-2-.5-3-1.5.5-3.5-4.5q-2.2.8-1.5-1.5l-5.5-6.5-1.5.5-.5-1.5-1.5.5-6-9.5-4-1-.5-3q-1.7 2.8-3.5-1.5l-3.5-4.5q-2.2.8-1.5-1.5l-3.5-4.5-1.5.5-3.5-4.5-1.5.5.5-1.5-2.5-1.5-2.5-3.5-3.5-2.5-1.5-2.5q-2.2.8-1.5-1.5h-2q1.3-3.7-2.5-2.5v-2l-1.5-.5.5-1.5-2 1-.5-1.5.5-1.5-3.5-1-3.5-5-7-6-2.5-1q1.5-3.7-1.5-3v-2l-3.5-.5.5-1.5-4.5-2-.5-3-1.5.5q2.8-1.8-1.5-3.5l-1.5.5q2.2-1.2-.5-2.5l-3-2-1.5-3h-3v-3h-2q1.1-2.7-1.5-2l-2.5-1.5.5-1.5-3.5-2.5-.5-2.5-2 1-3-5-1.5.5-1.5-3.5-3-2-2.5-4h-2q1.1-2.7-1.5-2l-11-12q-1.2 2.3-2.5-.5l.5-1.5-3-2-1.5-3-3-1.5q.8-2.6-2.5-1.5v-2l-3-2-4.5-6-6-4.5-.5-1.5-1.5.5V275h-2q1.1-2.7-1.5-2v-2l-4.5-2-3.5-5-2.5-1.5-1.5-2.5-3-2v-2l-3.5-1q1.5-3.8-1.5-3l-2.5-.5 1-1-4.5-4.5H585v-2h-2v-2q-2.7 1.1-2-1.5l-3-1 1-1-7.5-7.5-1.5.5-1.5-3.5-2.5-1.5V224h-2q1.1-2.7-1.5-2l-2.5-1-.5-2-1.5.5-1.5-3.5-3.5-2.5q.8-2.2-1.5-1.5l-5-6q-2.6.7-1.5-2h-3v-1.5l-2-3.5h-2v-2h-2v-2q-2.7 1.1-2-1.5l-6-3.5v-3h-2q1.1-2.7-1.5-2l-3-4-1.5.5-7.5-9.5-5.5-3.5-3.5-4.5-2.5-1.5.5-1.5-2 1-.5-1.5 76-150 7.5-7.5zm578 330 10 1 11.5 8.5q4.4 5.6 4 16l-74 257-3 7-8 31-3 7-6 24-3 7-6 24-3 7-4 17-1.5 1.5v-2h-2.5v-2q-2.7 1.1-2-1.5l-5-3.5-3-6q-3 1-2-2h-3v-1.5l-4-2.5q1.1-3.3-3-2v-2.5l-1-2.5-7-4.5-2.5-3.5-4.5-3.5-2.5-3.5-1.5.5q2.8-1.8-1.5-3.5l-7.5-5.5 1-2h-2l-3.5-4.5-3.5-2.5-1-3.5-4-1.5-1.5-2.5-2.5-1.5-1.5-2.5-4.5-3.5-2-3h-2q.5-5-3.5-5.5l-2.5-.5.5-1.5-2.5-1.5-2.5-3.5q-3.3 1.1-2.5-1.5l-1-2.5q-3.8 1.5-3-1.5l-4-3q2.7-1.7-1.5-3.5l-5-4-1.5.5.5-1.5-1.5-.5.5-1.5-4.5-2-1-4q-2.7 1.1-2-1.5l-5-2.5-1.5-4-2.5-1.5-1.5-2.5-3.5-1.5-5.5-7.5q-1.2 2.3-2.5-.5l-.5-2.5-1.5.5q.8-2.2-1.5-1.5l-1-3-11.5-10.5q.8-2.2-1.5-1.5l-4.5-3.5-1.5-2.5-2 3 .5-1.5L1152.5 336z"
+                                        opacity=".988" />
+                                    <path fill="#4c68ff" stroke="#4c68ff"
+                                        d="m21.5 426 2.5 1.5-1.5.5zm1 3 4.5 1q-1 3.8 1.5 5l2-1v2l1.5.5-.5 1.5 3 1 1.5-.5-1 2.5 3 .5-.5 1.5q2.6-.8 1.5 2.5h4v2q-.7 2.3 1.5 1.5l2.5 1 .5 3 1.5-.5-.5 1.5 3.5 2.5 6 7 2.5.5 1.5.5-2 1 4 3 .5 1.5q1.3-2.2 2.5.5l1.5 3.5q1.3-2.2 2.5.5l-2 1 3 1 .5 1.5 2-1-.5 1.5.5 1.5 1.5-.5-.5 1.5 3 2 1.5-.5-.5 1.5 1.5.5-2 1 2.5 1.5q1.3-2.2 2.5.5l1.5 3.5 1-2 .5 1.5-.5 1.5 1.5.5-.5 1.5 3.5 1v2q3.7-1.5 3 1.5h2l1.5 3.5 1.5-.5-.5 1.5 3.5 1 .5 3 1.5-.5-.5 1.5 3.5 2.5q-.7 2.3 1.5 1.5v1l-1.5.5 3 .5.5 2 1-2 .5 1.5-.5 1.5q4-.5 4.5 2.5l1.5 3.5 2.5-1q-1.7 4.1 2.5 3l-.5 1.5.5 1.5 1.5-.5.5 3.5 1-4 .5 4 6 2.5-3 1 2.5 1.5 1.5-.5-1 2 4.5 2.5 1.5.5-1 2q1.8-1.6 3.5 1.5l3.5 1.5-2 1 4 3q-1.1 3.3 1.5 2.5l2-1v3l-1.5.5 2.5 1.5 1-2 .5 3q4.1-1.7 3 2.5l1 2.5 2.5 1q1.3-2.2 2.5.5l-1 2 3.5 2.5 1.5-.5-.5 1.5 4.5 2 2 4.5-.5 1.5 3.5-1 1.5 4 1-2 .5 3q3-1 2 2h2.5l-.5 3.5 1.5 1.5 2.5-1 1.5 3h1.5v4h1.5v-2l1 3q4-.5 4.5 2.5l1.5 2.5q2.3-.7 1.5 1.5l1.5 2.5 1-2 .5 5 3.5-1 1 2-2.5.5q1.3 2.8 2.5.5l2.5 1.5-.5 1.5q3.3-1.1 2.5 1.5l1 2.5 4 1.5q-.7 2.3 1.5 1.5v2l3 2 1.5-.5v2q-.7 2.3 1.5 1.5l2.5.5q-2.3 1.3.5 2.5l2.5 1.5 1 3.5 6 3.5-2 1 9 4.5 1.5 4 1.5-.5-.5 1.5 3.5 1.5-2 1 3 1q-2.2 1.3.5 2.5l3-1v1q-3.7-1-2.5 2h4v1.5l5 4q-.7 2.3 1.5 1.5l1.5-.5-1.5 2.5 3.5 1.5-.5 1.5q2.6-.8 1.5 2.5l1.5-.5 2.5 1.5-.5 1.5q2.3.8 1.5-1.5h1l1 2q-2.2 1.3.5 2.5l1.5-.5-.5 1.5 1.5.5-.5 1.5 2-1 2.5 5h2q-1.5 3.8 1.5 3l1.5-.5-1 2 2 1 .5-1.5.5 1.5-1 2q2.2-1.8 4.5 2.5 3.3-1.1 2.5 1.5l.5 1.5-1.5.5 3 .5q-1.2 3 2.5 2 3.2 1.3 3 6l1-3 1.5 2.5-.5 1.5 3.5.5v2l.5 1.5 2.5-1.5-1 2q1.2 3.3 5 2.5-1.5 3.7 1.5 3l4.5 3q-1.1 2.7 1.5 2l2.5 4 2 .5-1 2 2.5 1.5v-2l1.5 3.5-.5 1.5q5.1-.6 6.5 2.5l-1 2 5 2-2 1 2.5.5 8 8 1.5-.5q-.7 2.3 1.5 1.5v1q-2.6-.7-1.5 2 3.8-.7 5 2.5v1.5q3.8-1.5 3 1.5l1 2.5 6 2.5-.5 1.5h2.5v4h1.5l.5 2.5.5 1.5 1-3 1 3 1.5-.5q-.7 2.3 1.5 1.5 2.8 1.3.5 2.5l.5 1.5 2.5-1.5.5 2.5 1.5-.5q-2.2 1.3.5 2.5l1.5-.5-.5 1.5 4.5 2.5v2l.5 1.5 2-1v1l-1.5.5 4 2 1 3.5 4 1.5.5 1.5 1.5-.5-1 2 6 2.5q1.1 2.7-1.5 2v1l2 1 1-2 1.5 2.5-1 2q1.3 2.8 2.5.5l1.5.5v2l.5 1.5 1-2 1 4 1-2 2 5 1-2 2 3 1.5-.5 1.5 4.5 1-2 .5 4q3.8-.7 5 2.5l1.5 2.5q1.2-2.2 2.5.5l-1 3q4.6-.6 6 2l1 2-.5 1.5 4.5 2q-1.2 3 2.5 2v2l2-1q-1.6 1.8 1.5 3.5l.5 2.5 2.5-1 1 2.5-2 1 3.5 1.5 1.5-.5 2 4.5q3-1 2 2h3v2.5l1.5 2.5q1.3-2.2 2.5.5l-2 1 4 .5 1.5 3q3.3-1.1 2.5 1.5l1.5 2.5 1.5-.5 1.5 2.5 2.5.5-2 1 2 1-.5 1.5 4.5 1.5-2 1 3.5 1.5 1.5-.5-1.5 2.5 2-1 2 3 1.5-.5-1 3 3.5 3.5 2.5-1 2.5 5 1.5-.5-.5 1.5 3.5 2.5 1.5 3.5 2-1 1.5 3q2.7-1.1 2 1.5l4 2.5.5 3 1.5-.5-.5 1.5 1.5.5-.5 1.5 2-1 2.5 1.5q-2.2 1.3.5 2.5 2.3-.7 1.5 1.5l.5 2.5 2-1q3.7 2 2 4l2.5.5-.5 1.5 2-1 .5 2 2 .5-.5 1.5q2.6-.8 1.5 2.5l2 1 .5-1.5 2 4 2.5.5-1 1 4 4 .5 2.5 2-1 3.5 6-9.5 1h-2l-48 4-1 1-15 1-1 1h-6l-1 1h-6l-1 1-29 4-75 17-61 19-12 1-1 1h-21l-21-4-16-6q-19.2-9.3-32.5-24.5-15.4-17.1-23-42l-8-31-3-7-6-24-3-7-6-24-3-7-6-24-3-7-6-24-3-7-8-31-3-7-6-24-3-7-6-24-3-7-63-219v-2l-2-4 1-2z"
+                                        opacity=".992" />
+                                    <path fill="#5843ff" stroke="#5843ff"
+                                        d="M19.5 330h6l10 4L65 363.5l538 548q6.3 5.2 6 17-1.8 9.7-8.5 14.5l-8 4-25 1-1 1H546l-1.5-4-1 2-1.5-2.5.5-1.5-2 1-1-3-1.5.5q2.8-1.8-1.5-3.5l-1.5.5 1.5-2.5-3-1-1.5.5 1-3h-1l-.5 1.5-1.5-4-2.5 1-2-3q1.8 3.8 3.5.5l-2-.5-.5-2-2 1v-2l-6.5-3.5v-2q.8-2.2-1.5-1.5l-1-3-2-1-2 1v-2l-2.5-1.5q1.1-3.3-1.5-2.5l-2.5-.5v-2l-2-3-1.5.5-2.5-1.5-3.5-5.5-2.5-1.5-2-4.5-2.5 1-4.5-4.5v-2l-1.5-2.5-2 1v-2l-4.5-2.5.5-1.5-2.5-.5.5-1.5-1.5-.5 2-1-2.5-.5-1.5.5v-2l-.5-1.5-1.5.5-.5-1.5-1.5.5 1-2.5-3.5-1-1.5.5 1-2.5-4-.5 2-1-3-1-1-4.5h-3v-2q-2.7 1.1-2-1.5l-2.5-3.5h-2l-2.5-.5 2-1-1-2.5-2.5 1-3-5-1.5-.5.5-1.5H438q1.1-2.7-1.5-2l-3.5-2.5v-2l-.5-1.5-1.5.5.5-1.5-4.5-.5 1-3-4-2-2.5-3.5q-4.2 1.3-2.5-3.5h-1l-.5 1.5-2-5-2.5 1.5v-2l-.5-1.5-1 2-2-5-1 2-1-4-1 2-1.5-2.5.5-1.5-2 1-4-5-1.5-.5 2-.5q1.3-3-2.5-2l-3.5-2.5 1-2h-2l-1.5-2.5q-3.3 1.1-2.5-1.5h-2l1-2-5-3-1-2 .5-1.5-2 1-1-3-4.5-3.5-.5-2.5-2.5 1.5-1-2 .5-1.5q-2.2.8-1.5-1.5h-2l-.5-2.5-1 3-1.5-2.5.5-1.5H364v-4h-2.5v-2l-5.5-2-1-4q-3.7 1.5-3-1.5-1.2-3.2-5-2.5-1.1-2.7 1.5-2v-1q-2.2.8-1.5-1.5l-1.5.5-3.5-2.5-.5 1.5-.5-1.5 1-1-4.5-4.5-2.5-.5 2-1-5-2 1-2-7-3 1-3-1.5.5-2.5-1.5 1-2-2-.5-1.5-3-1.5.5.5-1.5-2 1 .5-1.5q.8-2.2-1.5-1.5-1.7-3.1-3.5-1.5l.5-1.5q-3 .7-1.5-3h-2.5l-3-4-1.5.5-1-2 .5-1.5-3.5-.5 1-2-2-1-.5 2.5q.2-4.7-3-6H294q1.3-3-2.5-2v-1l1.5-.5-1-2.5q-4.3.7-5.5-3l-1.5.5-2-3 1-2-1.5.5H281v-3q-2.7 1.1-2-1.5l-1.5.5-1.5-.5 2-.5-.5-2h-2l-1.5-.5.5-1.5-6.5-4.5q2.3-1.2-.5-2.5l-2 1-.5-3-2-.5.5-1.5-3.5-1.5.5-1.5q-2.2.8-1.5-1.5h-2l.5-1.5-3.5-2.5V656h-4v-1.5q-3.1-1.7-1.5-3.5l-3.5-1.5.5-1.5-3-2-1.5.5 1-3.5-4.5-2-1.5.5q2.3-1.2-.5-2.5l-2.5-.5 2-1-6-3.5-1.5-4-1.5.5.5-1.5-5.5-3-2.5-4-1.5.5.5-1.5-1.5-.5.5-1.5-2 1 .5-1.5-.5-1.5-1.5.5.5-1.5q-3.3 1.1-2.5-1.5l-1-2.5-3-.5q2.3-1.2-.5-2.5l-2 1-1-2 2.5-.5q-1.2-2.7-2.5-.5-4.6 1.4-2.5-4.5h-1l-.5 1.5-1-2-1.5.5 1-2.5-2.5 1-.5-2.5-.5-1.5-1 2-1.5-2.5.5-1.5-4.5-1v-4h-1.5l-1.5-3-2.5 1-1.5-1.5.5-3.5H179q1-3-2-2v-2.5h-1l-.5 1.5-1-2-1.5.5 1-2.5-3.5 1 .5-1.5-2-4.5-2.5-1-1.5.5.5-1.5-5.5-3.5 1-2-3.5-1.5q-2.2.8-1.5-1.5l-1-3.5q-4.1 1.7-3-2.5h-1l-.5 1.5-2.5-1.5 2-1-.5-2.5-3.5 1q.8-3.8-2.5-5l-1.5-.5 2-1-5.5-3.5-1.5.5 1-2-3.5-2.5q-1.2 2.3-2.5-.5l1-2-1.5.5-2.5-1.5 3-1-5.5-2.5q-1.2 2.3-2.5-.5l-.5-3.5-1.5.5 1-2-3-.5q1.5-3.8-1.5-3l-1.5.5-.5-1.5-1.5.5 1-2-3-1 .5-1.5-3.5-1.5q.8-2.6-2.5-1.5v-1l1.5-.5-2-.5-.5-2-2 1v-1l1.5-.5-3.5-2.5-1.5.5 1-3.5-6-3.5-.5-2.5-1.5.5V497h-3q1.1-2.7-1.5-2l-2.5-1.5.5-1.5-3-2-1.5.5 1-3q-1.7 1.6-3.5-1.5l-1.5-.5 2-1-7-5 1-2-1.5-.5-1.5.5-.5-1.5q-1.2 2.3-2.5-.5l2-1-3-1-2.5-4.5-1.5.5-2.5-3.5-3.5-2.5-6-7-3-1 .5-1.5-2.5-1.5q1.1-3.3-1.5-2.5l-2.5-1-2.5-4-1.5.5q1.1-3.3-1.5-2.5v-2H35q1.1-2.7-1.5-2l-2.5-1.5.5-1.5-4.5-2.5q1.8-5.2-3.5-3.5l-1.5-.5 2 7h-1l-19-67-3-7q-2.3-6.7-1-17 2.3-6.7 7.5-10.5zm2.5 96 1 2h1zm104 101-1 4h1zm125 126v1h2zM24.5 439l1.5 3.5-2-1zm151 142 1 2zm363 368 6.5.5-6.5.5z"
+                                        opacity=".984" />
+                                    <path fill="#8f14fd" stroke="#8f14fd"
+                                        d="m378.5 397 3 4h1.5v2q2.7-1.1 2 1.5l7 6q-.7 2.3 1.5 1.5l1.5 3 4 2.5 4.5 5.5 7 6 2.5 4q2.7-1.1 2 1.5l4 3 .5 1.5 1.5-.5.5 2.5 1.5-.5q-1.1 3.3 1.5 2.5l1.5 3 3 1.5 2.5 3.5 7.5 5.5-.5 1.5 3.5 2.5v1.5h2q-1.1 2.7 1.5 2l2 3 1.5-.5-.5 1.5q2.6-.7 1.5 2h3v1.5l2.5 3.5 1.5-.5 3.5 4.5q2.3-.7 1.5 1.5l2.5 3.5 1.5-.5 2 3 4 2.5q-1.1 2.7 1.5 2l4 5 1.5.5-.5 1.5 3.5 1v2q2.7-1.1 2 1.5l7 5.5q-1.1 2.7 1.5 2l5 6q2.3-.7 1.5 1.5l6 5 2 3 5 4v1.5h2q-1.1 2.7 1.5 2l5 6q2.3-.7 1.5 1.5l5 4 1.5 2.5q2.3-.7 1.5 1.5l3 1.5v2q2.7-1.1 2 1.5h2l3.5 5.5q2.3-.7 1.5 1.5l4 2.5 2.5 4q2.6-.7 1.5 2h2v2h2.5v2l3.5 1.5-.5 1.5 2.5 1.5q-.7 2.3 1.5 1.5l2.5 4h2v2q2.7-1.1 2 1.5l6 4q-2.2 1.3.5 2.5 2.3-.7 1.5 1.5h2l-.5 1.5q2.3-.7 1.5 1.5l5 4v1.5h3q-1.1 2.7 1.5 2v2l5.5 4.5q-.7 2.3 1.5 1.5l3.5 2v3q2.7-1.1 2 1.5h2l-.5 1.5q3.3-1.1 2.5 1.5l2 3.5 4 2.5 2 3h2l-.5 1.5 6.5 5.5q-.7 2.3 1.5 1.5l5.5 4q-1 3 2 2v3h1.5l3.5 2q-1.1 2.7 1.5 2l4 5h1.5v2q2.7-1.1 2 1.5l5 4v1.5h2q-1.1 2.7 1.5 2 3.7 2 2 4l4.5 1.5-1 1 4.5 4.5 5.5 4.5 2 3 6 4.5q-1.1 2.7 1.5 2l1.5 3q3-1.2 2 2.5L607.5 775q-5.5 4.5-17 3-7.7-2.2-12.5-7.5l-219-225q-11.8-13.2-17-33l-1-11-1-1v-15l3-16 4-11zm361 361h2l5.5 5.5 2 3 6 5 1.5 2.5 3.5 1.5-.5 1.5 3.5 2.5.5 1.5 1.5-.5 2 3 6 4.5 2.5 4q2.3-.7 1.5 1.5l3 1.5q-1.5 3.8 1.5 3l5.5 4.5-.5 1.5 3.5 2.5q-.7 2.3 1.5 1.5l3.5 2v2h2v2h2q-1.1 2.7 1.5 2l4.5 6 3 1.5 6.5 7.5 1.5-.5-1 2h2l3.5 4.5 3 2 4 5q2.3-.7 1.5 1.5l3 1.5q-1.1 2.7 1.5 2l1.5 3 3 1.5 2 3 6 5q-.7 2.3 1.5 1.5l5 6q2.3-.7 1.5 1.5h2l4 6.5q4.1-1.7 3 2.5l3 1.5.5 2 1.5-.5 1 3.5 6 3 1 4 6 3q-1.5 3.8 1.5 3l3.5 2 1.5 4q3.3-1.1 2.5 1.5l4 3-.5 1.5 5.5 3 1.5 4 1.5-.5q-.7 2.3 1.5 1.5l2.5 5h3v2q2.7-1.1 2 1.5l3 1.5v3q3.7-1.5 3 1.5l8 6.5v2q2.7-1.1 2 1.5l6 5 1 3.5 6 3v1.5l9.5 9.5q2.3-.7 1.5 1.5l3 1.5 1.5 3 2.5 1.5 2.5 3.5 5 4v2l3.5 1 1.5 3q2.3-.7 1.5 1.5l1 3.5-24.5 10-11 2h-19l-11-2-37-13-31-9-63-15-18-10-42.5-42.5-53-55-3-9v-5l4-10z"
+                                        opacity=".992" />
+                                    <path fill="#d42aa7" stroke="#d42aa7"
+                                        d="m500.5 161 2.5 1.5-.5 1.5 4.5 3.5.5 1.5 1.5-.5-.5 1.5 7.5 5.5 4.5 6.5 1.5-.5 2.5 3.5q2.6-.7 1.5 2h2q-1.5 3.7 1.5 3l4.5 3.5 6 7 2 3.5h3q-1.1 2.7 1.5 2l5 6q2.3-.7 1.5 1.5l5 4 .5 2.5 1.5-.5q-.7 2.3 1.5 1.5l2.5 1q-1 3 2 2v2.5l4 3 .5 2.5 1-1 9.5 9.5v1.5h2v2h2q-1.1 2.7 1.5 2l7.5 6q-1.5 3.7 1.5 3l2.5 1.5-.5 1.5 3 2 3 4 4.5 3.5q-.7 2.3 1.5 1.5l3.5 2.5-.5 1.5q2.6-.7 1.5 2h2v1.5h2l4.5 5.5q2.3-.7 1.5 1.5l6 4.5q-1.1 2.7 1.5 2v2q3.3-1.1 2.5 1.5l3 1.5 1.5 3 3 2 1 3 1.5-.5 10.5 11.5q2.6-.7 1.5 2h2v1.5l4 2.5q-1.1 2.7 1.5 2l2 4 1.5-.5 2.5 4.5 2-1 3 5 1.5.5-.5 1.5 3.5 1q-1 3 2 2v3q3.7-1.5 3 1.5l3 1.5q-1.1 2.7 1.5 2l5.5 5.5v2.5l5 2.5-.5 1.5 3.5.5-.5 1.5h1.5q-1.5 3.8 1.5 3l2.5 1v2h2v2h2q-1.1 2.7 1.5 2l3.5 5 4 1.5-1 2 1.5-.5 1.5.5-.5 1.5 1.5.5-.5 1.5q3.8-1.2 2.5 2.5h2q-.7 2.3 1.5 1.5l4 5 3.5 2.5 1.5 2.5 5.5 4.5.5 1.5 1.5-.5 3 5.5 5 3.5 1.5 2.5q1.3-2.2 2.5.5-1.1 3.3 1.5 2.5l2.5 1 6.5 10 1.5-.5.5 1.5 1.5-.5 5 7.5 5 3.5.5 1.5 1.5-.5q-1.1 3.3 1.5 2.5l3.5 2v2q2.7-1.1 2 1.5l1.5 2.5 1.5-.5 2 4.5 4 1.5-.5 1.5 3 2 3.5 2.5 1.5 3.5 6.5 4.5 5.5 6.5q2.3-.7 1.5 1.5l6 4.5 1.5 4 1.5-.5 2 3 6 5 1 3.5h3v2h2q-1.1 2.7 1.5 2l5 6q-2.2-.7-1.5 1.5l1 2q-5.3 21.2-18 35L776.5 602l-2.5-4-8-5.5.5-1.5-3.5-2.5-1.5-2.5q-2.2.8-1.5-1.5h-2q.8-2.2-1.5-1.5l-6-7H749q1.5-3.8-1.5-3l-3.5-2-1.5-3-3-2-4-5-1.5-.5q2.3-1.2-.5-2.5H731q1.1-2.7-1.5-2v-2q-4 .5-4.5-2.5l-1.5-2.5-2.5-1.5-3.5-4.5-2.5-1.5q.7-2.6-2-1.5v-2.5h-2l-2.5-3.5-1.5-.5.5-1.5-3.5-1.5V529h-2q1.1-2.7-1.5-2l-1.5-3-4-2v-2.5h-2l-.5-2.5-1.5.5V515h-3v-2h-2q1.1-2.7-1.5-2l-6-7-4.5-3.5q.8-2.2-1.5-1.5l-1.5-3h-2q1.1-2.7-1.5-2l-3-4-3-2-6-7-6.5-5.5-.5-1.5-1.5.5.5-1.5-5.5-3-.5-3-1.5.5-.5-2.5-1.5.5.5-1.5-5-4-1.5-3q-3.7 1.5-3-1.5l-2-3.5-7-5.5-2.5-3.5-1.5.5.5-1.5-2.5-1.5q.8-2.2-1.5-1.5l-2.5-1.5.5-1.5-3.5-1-3-6q-3.7 1.5-3-1.5l-5-4-1.5-3.5q-2.6.7-1.5-2h-2v-1.5l-5-3 .5-1.5-2.5-1.5V409h-3q1.1-2.7-1.5-2l-3.5-5-3-1.5-7.5-8.5-1.5.5 1-2.5-4-1.5-2.5-3.5-1.5.5q2.3-1.2-.5-2.5l-1.5-.5.5-1.5q-3.3 1.1-2.5-1.5l-6-4.5v-2q-2.7 1.1-2-1.5l-2.5-1.5-1.5.5 1-2-4-2.5-1.5-3q-2.2.8-1.5-1.5l-5-3 2-1-5-1.5-4.5-6-1.5-.5q2.3-1.2-.5-2.5l-1.5.5-4.5-6.5q-2.6.7-1.5-2h-3v-1.5l-3-4.5-4-1.5 1-2h-2q.8-2.2-1.5-1.5l-4.5-3-1-4q-2.7 1.1-2-1.5l-3.5-2.5-1.5.5 1-2.5-4-.5v-2l-.5-1.5-1.5.5q.8-2.2-1.5-1.5v-2q-2.2.8-1.5-1.5-2-3.7-4-2l-1.5-2.5-2.5-1.5q2.3-1.2-.5-2.5l-3-2-1.5-3-4-1-1.5-3q-2.2.8-1.5-1.5l-1-2.5-9-7.5q.8-2.2-1.5-1.5l-5.5-4.5L498 162zm418 415 3 4 4.5 2v1.5l10.5 10.5 2.5 1.5-.5 1.5q2.3-.7 1.5 1.5h2l1.5 3.5 1.5-.5 6.5 8.5 3.5 1.5 1.5 2.5 2.5 1.5q-1.1 3.3 1.5 2.5l3.5 2.5 2 3 1 2.5 5 2.5-.5 1.5 3.5 1v2h2q-1.1 2.7 1.5 2 3.7 2 2 4l3.5 2.5v1.5q3.7-1.5 3 1.5l1 2.5q3.8-.7 5 2.5l1.5 2.5 1.5.5-.5 1.5q5-.5 5.5 3.5l.5 2.5 1.5-.5 2 3 6 5 1.5 2.5 2.5 1.5 1.5 2.5q3.3-1.1 2.5 1.5l3.5 4.5 4.5 3.5.5 1.5 1.5-.5 1 2-.5 1.5 11.5 9.5 3.5 4.5 3.5 2.5 1.5 2.5 5.5 3 1 5h3q-1.1 2.7 1.5 2l2.5 4h3v2q2.7-1.1 2 1.5l3 4.5 5 3.5q-.7 2.6 2 1.5v2h2.5l.5 2.5-37.5 129.5-2-3q-2.2.8-1.5-1.5-2-3.7-4-2-.7-2.2 1.5-1.5v-1q-3.3 1.1-2.5-1.5l-4-2q.8-2.2-1.5-1.5l-2.5-1.5.5-1.5q-2.2.8-1.5-1.5l-5-4-.5-2.5-1.5.5-.5-2.5-1.5.5-1.5-2.5-1.5-.5.5-1.5h-2l-5.5-5.5V829q-3.7 1.5-3-1.5l-3-1.5v-2q-2.7 1.1-2-1.5l-2-3.5q-3.8.8-5-2.5l-1-3.5-4-1v-2h-2q1.1-2.7-1.5-2l-3-4q-2.2.8-1.5-1.5l-1-2.5h-3v-2q-2.7 1.1-2-1.5l-2.5-1.5-1.5.5 1-2-7-6-1.5-2.5-3.5-1.5.5-1.5-3-2-2.5-4-3-1.5V773h-2q1.1-2.7-1.5-2l-8.5-7.5-2-4.5-5-3.5-1.5-2.5H927q1.7-4.1-2.5-3v-2l-2.5-.5.5-1.5-2.5-1.5-.5-1.5-2 1 .5-1.5-.5-1.5-1.5.5q1.1-3.3-1.5-2.5l-2.5-4q-3.8 1.5-3-1.5l-4-3 .5-1.5q-3.3 1.1-2.5-1.5l-6-4.5v-2q-2.7 1.1-2-1.5l-3-4.5-5-3.5q.8-2.2-1.5-1.5l-4-5-3.5-1q1.5-3.7-1.5-3l-1.5-3-3-.5.5-1.5H870q1-3-2-2v-3h-2.5v-2q-5 .5-5.5-3.5V684h-2q1.1-2.7-1.5-2l-1.5-3-2-.5.5-1.5-4.5-3.5V672q-3.8 1.5-3-1.5l-5-4 .5-1.5-4.5-2.5.5-1.5-1.5-.5 7-9 73.5-74.5 1.5.5z"
+                                        opacity=".996" />
+                                </svg>
+                            </span>
+                            <span class="social-name">Throne</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://ko-fi.com/msaku" target="_blank" rel="noopener noreferrer"
+                            aria-label="Kofi profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24">
+                                    <path fill="#202020" stroke="#202020"
+                                        d="M384.5 161h225l1 1h42l1 1h23l1 1 31 1 1 1h11l1 1h10l1 1h10l1 1 22 2 36 8q24.8 7.2 46 18 37.2 19.3 63.5 49.5 25.7 29.8 39 72l6 26 1 13 1 1v10l1 1v50l-1 1v9l-1 1-1 12-5 22-13 34q-19.5 39-50.5 66.5-24.6 21.9-57 36-17.5 7.5-38 12l-17 3h-8l-2.5 1q-29.2 92.6-93.5 151-47.1 44.9-116 68l-29 8-27 5-14 1-1 1-27 1-1 1h-63l-1-1-27-1-1-1h-7l-1-1h-6l-23-4-24-6-41-15Q205 797.5 165 753.5q-55.9-60.6-81-152l-11-55v-7l-3-17v-9l-1-1v-11l-1-1-1-31-1-1v-26l-1-1v-81l1-1v-10l1-1v-7l1-1 2-17 11-37q15.8-38.7 43.5-65.5 33.7-33.3 87-47l22-4h7l1-1 30-2 1-1h12l1-1 33-1 1-1h24l1-1h39zm36.5 72-1 1h-58l-1 1-46 1-1 1h-14l-1 1h-11l-1 1h-9l-1 1-24 2-17 3-22 6q-21 7-36 20-18 14-28 37l-9 28-2 19-1 1v13l-1 1v45l1 1v38l1 1 1 34 1 1v11l1 1v10l3 17v7l6 33 7 27 15 41 18 35q13 20 29 38 30 31 73 49 20 9 44 14l29 5 20 1 1 1h80l1-1h11l1-1 21-2 26-6q54-16 91-49 69-62 89-174h48l27-5q36-11 60-34 21-20 34-49l8-25 1-11 1-1v-10l1-1-1-43-4-22q-8-32-27-52-21-24-52-37l-26-9-40-8-34-2-1-1h-15l-1-1h-18l-1-1h-29l-1-1z" />
+                                    <path fill="#202020" stroke="#202020"
+                                        d="M724.5 319h21l18 4q18.4 6.6 29.5 20.5 10.2 12.8 14 32-1.5 5.5 1 7v23l-1 1-1 11-4 12q-5.8 12.7-15.5 21.5-10.4 9.6-26 14l-14 3q-9.5-1.5-15 1l-11-2-10.5-8.5-2-5v-120q1.8-7.2 7.5-10.5z" />
+                                    <path fill="#d3cbc8" stroke="#d3cbc8"
+                                        d="m424.5 160 138.5.5-138.5.5zm-63 1 22.5.5-22.5.5zm249 0 24.5.5-24.5.5zm-279 1 12.5.5-12.5.5zm322 0 12.5.5-12.5.5zm-344 1 9.5.5-9.5.5zm368 0 9.5.5-9.5.5zm-385 1 7.5.5-7.5.5zm403 0 6.5.5-6.5.5zm-417 1 6.5.5-6.5.5zm431 0 6.5.5-6.5.5zm-443 1 5.5.5-5.5.5zm455 0 5.5.5-5.5.5zm-466 1 5.5.5-5.5.5zm477 0 5.5.5-5.5.5zm-486 1 3.5.5-3.5.5zm497 0 3.5.5-3.5.5zm-506 1 3.5.5-3.5.5zm515 0 3.5.5-3.5.5zm-522 1 2.5.5-2.5.5zm529 0 3.5.5-3.5.5zm-536 1 2.5.5-2.5.5zm543 0 2.5.5-2.5.5zm-548 1 2.5.5-2.5.5zm553 0 2.5.5-2.5.5zm-558 1 2.5.5-2.5.5zm626 20 3.5 1.5-1.5.5zm-680 1-1 2zm-5 3-1 2zm694 0 3.5 2.5-1.5-.5zm-697 2-1 2zm-3 2-1 2zm709 1 3.5 2.5-1.5-.5zm-712 1-1 2zm717 2 1 2zm-721 1-1 2zm726 2 1 2zm-730 1-3 4zm733 1 1 2zm3 2 2 3zm-741 1-7 8zm745 2 2 3zm4 3 2 3zm4 3 4 5zm-765 4-7 8zm772 2 16 17zm-472 6 147.5.5-147.5.5zm-59 1 21.5.5-21.5.5zm251 0 24.5.5-24.5.5zm-501 1-3 4zm222 0 12.5.5-12.5.5zm321 0 12.5.5-12.5.5zm-340 1 8.5.5-8.5.5zm363 0 8.5.5-8.5.5zm-378 1 6.5.5-6.5.5zm395 0 7.5.5-7.5.5zm-407 1 5.5.5-5.5.5zm421 0 6.5.5-6.5.5zm-431 1 4.5.5-4.5.5zm444 0 5.5.5-5.5.5zm-614 1-2 3zm161 0 3.5.5-3.5.5zm465 0 3.5.5-3.5.5zm-473 1 3.5.5-3.5.5zm480 0 3.5.5-3.5.5zm-488 1 3.5.5-3.5.5zm495 0 2.5.5-2.5.5zm-501 1 2.5.5-2.5.5zm507 0 2.5.5-2.5.5zm-649 1-2 3zm136 0 2.5.5-2.5.5zm671 3 3 4zm-810 1-1 2zm-2 3-1 2zm816 1 2 3zm-818 2-.5 1.5-1.5 2.5.5-1.5zm822 3 1 2zm-825 2-.5 1.5-1.5 2.5.5-1.5zm99 1-1 2zm728 0 1 2zm-733 3-1 2zm-3 2-1 2zm-3 2-2 3zm640 0 1 2zm3 2 1 2zm102 0 1 2zm-750 2-13 14zm653 1 2 3zm100 2 1 2zm-96 1 2 3zm4 3 3 4zm5 4 11 12zm-680 4-2 3zm-3 4-1 2zm-2 3-1 2zm698 3 2 3zm-701 2-1 2zm705 3 1 2zm3 4 1 2zm3 5 1 2zm-140 8 14.5.5-14.5.5zm20 1 2.5.5-2.5.5zm6 1 2.5.5-2.5.5zm-35 1-1 2zm-3 2-4 5zm-381 2 5.5.5-5.5.5zm16 0 6.5.5-6.5.5zm158 0 5.5.5-5.5.5zm16 0 5.5.5-5.5.5zm-163 1 2.5.5-2.5.5zm174 0 2.5.5-2.5.5zm241 2 1 2zm-707 3 .5 2.5h-1zm713 1 2 3zm-640 3 .5 2.5h-1zm566 0 .5 116.5h-1zm78 0 6 7zm169 1 .5 2.5h-1zm-887 1 .5 3.5h-1zm73 3 .5 2.5h-1zm145 1-1 2zm670 0 .5 2.5h-1zm-673 2-1 2zm-216 1 .5 4.5h-1zm392 0-1 2zm335 0 1 2zm-211 1 1 2zm-176 1 1 2zm-267 1 .5 2.5h-1zm656 0 1 2zm161 0 .5 2.5h-1zm-503 1-2 3zm133 0 1 2zm-312 1-1 2zm608 0 .5 2.5h-1zm-85 1 1 2zm-205 3 8 9zm-527 1 .5 5.5h-1zm818 0 .5 2.5h-1zm74 0 .5 3.5h-1zm-819 1 .5 5.5h-1zm303 5-3 4zm443 0 .5 2.5h-1zm-463 1 2 3zm-161 2-1 2zm698 0 .5 5.5h-1zm-533 3 1 2zm179 0 1 2zm-169 1-1 2zm450 0 .5 4.5h-1zm-629 1-1 2zm-119 1 .5 45.5h-1zm-73 1 .5 46.5h-1zm364 0 1 2zm379 8 .5 3.5h-1zm152 0 .5 32.5h-1zm-73 2 .5 30.5h-1zm-78 8 .5 11.5h-1zm-1 18 .5 3.5h-1zm78 12 .5 3.5h-1zm73 2 .5 4.5h-1zm-725 2 .5 2.5h-1zm651 4 .5 2.5h-1zm-254 2 .5 2.5h-1zm-398 2 .5 4.5h-1zm725 0 .5 3.5h-1zm-74 1 .5 2.5h-1zm-85 5-1 2zm158 1 .5 2.5h-1zm-818 2 .5 14.5h-1zm658 0-1 2zm-731 3 .5 15.5h-1zm729 0-3 4zm161 1 .5 2.5h-1zm-1 5 .5 2.5h-1zm-722 2 .5 4.5h-1zm553 1-2 3zm-155 4 .5 3.5h-1zm150 0-1 2zm-70 4 5 6zm-477 2 .5 2.5h-1zm396 3 .5 2.5h-1zm-490 1 .5 8.5h-1zm608 2 2.5.5-2.5.5zm-21 1 4.5.5-4.5.5zm8 0 8.5.5-8.5.5zm-668 1 .5 9.5h-1zm800 7-1 2zm-2 3-1 2zm-724 3 .5 6.5h-1zm722 0-1 2zm-2 3-1 2zm-793 2 .5 7.5h-1zm791 1-2 3zm-4 5-3 4zm-713 3 .5 4.5h-1zm707 4-7 8zm-780 1 .5 5.5h-1zm866 4-1 2zm-792 2 .5 4.5h-1zm695 3-4 5zm93 2-.5 1.5-1.5 2.5.5-1.5zm-861 1 .5 4.5h-1zm762 2-2 3zm-688 1 .5 3.5h-1zm784 1-1 2zm-101 2-1 2zm-3 2-1 2zm101 1-1 2zm-854 1 .5 3.5h-1zm750 0-1 2zm-676 2 .5 2.5h-1zm778 0-2 3zm-107 1-1 2zm104 3-1 2zm-315 2-1 2zm-533 1 .5 3.5h-1zm74 0 .5 3.5h-1zm772 0-2 3zm-316 4-1 2zm313 0-3 4zm-842 3 .5 3.5h-1zm74 0 .5 2.5h-1zm453 0-1 2zm311 2-4 5zm-763 4 .5 2.5h-1zm613 0 2.5.5-2.5.5zm-492 1 1 2zm478 0 8.5.5-8.5.5zm-673 1 .5 2.5h-1zm831 1-15 16zm-198 1 .5 2.5h-1zm-115 1-1 2zm-443 1 .5 2.5h-1zm-74 2 .5 2.5h-1zm200 1 1 2zm314 0-1 2zm-439 2 .5 2.5h-1zm-74 3 .5 2.5h-1zm203 0 1 2zm306 0-2 3zm-508 6 .5 2.5h-1zm207 0 2 3zm603 0-4 5zm-735 1 .5 2.5h-1zm427 0-4 5zm123 4 .5 2.5h-1zm178 1-2 3zm-588 3 15 16zm584 0-2 3zm-4 3-1 2zm-4 3-1 2zm-3 2-1 2zm-5 3-1 2zm-305 5-5 6zm-241 5 2 3zm230 5-1 2zm-223 1 1 2zm5 4 1 2zm212 0-1 2zm-207 4 1 2zm202 0-1 2zm-198 3 1 2zm194 0-1 2zm254 2 2.5.5-2.5.5zm-444 1 1 2zm186 0-1 2zm252 0 2.5.5-2.5.5zm-9 1 4.5.5-4.5.5zm-247 2-1 2zm-4 3-1 2zm-3 2-1 2zm-161 2 1 2zm154 3-1 2zm-3 2-1 2zm-3 2-1 2zm-3 2-1 2zm-3 2-1 2zm-3 2-1 2zm-11 7-1 2zm192 4-.5 1.5-1.5 2.5.5-1.5zm-200 1-1 2zm195 8-1 2zm-3 5-1 2zm-477 1 1 2zm234 1 2.5.5-2.5.5zm240 3-1 2zm-470 3 1 2zm468 0-1 2zm-466 3 1 2zm464 0-2 3zm-462 3 1 2zm459 1-1 2zm-457 2 1 2zm455 1-2 3zm-453 2 1 2zm538 0-1 2zm-88 2-2 3zm-448 1 1 2zm-83 2 1 2zm528 1-3 4zm-442 1 2 3zm529 0-1 2zm-526 4 3 4zm435 0-4 5zm-520 1 1 2zm608 0-1 2zm-519 4 5 6zm-86 1 1 2zm602 0-1 2zm-91 1-19 20zm89 2-1 2zm-597 2 1 2zm595 1-1 2zm-593 2 1 2zm90 1 7 8zm501 0-1 2zm-589 2 1 2zm587 1-1 2zm-585 2 1 2zm583 1-2 3zm-581 2 1 2zm95 2 5 6zm483 0-1 2zm-576 1 1 2zm476 2-4 5zm98 0-2 3zm-572 1 2 3zm99 3 2 3zm470 0-3 4zm-566 1 1 2zm465 0-2 3zm-364 3 2 3zm-98 1 2 3zm457 0-2 3zm102 0-3 4zm-457 2 1 2zm351 1-1 2zm-450 1 3 4zm102 0 1 2zm345 1-1 2zm105 0-4 5zm-444 3 1 2zm-104 1 3 4zm107 1 1 2zm327 1-1 2zm108 1-6 7zm-430 1 1 2zm317 1-1 2zm-423 2 5 6zm113 1 3.5 2.5-1.5-.5zm303 1-1 2zm110 5-10 11zm-517 3 11 12zm502 11-6 7zm-487 3 6 7zm153 1 2.5.5-2.5.5zm5 1 2.5.5-2.5.5zm167 0 2.5.5-2.5.5zm-162 1 2.5.5-2.5.5zm157 0 2.5.5-2.5.5zm-151 1 2.5.5-2.5.5zm146 0 2.5.5-2.5.5zm-140 1 2.5.5-2.5.5zm133 0 3.5.5-3.5.5zm170 0-3 4zm-296 1 3.5.5-3.5.5zm119 0 3.5.5-3.5.5zm-110 1 4.5.5-4.5.5zm100 0 4.5.5-4.5.5zm-282 1 3 4zm194 0 8.5.5-8.5.5zm73 0 7.5.5-7.5.5zm196 2-2 3zm-457 3 2 3zm452 1-2 3zm-447 3 2 3zm443 0-2 3zm-439 3 1 2zm435 0-1 2zm-432 2 2 3zm428 1-1 2zm-424 2 1 2zm421 0-1 2zm-418 2 1 2zm415 0-1 2zm-412 2 1 2zm409 0-1 2zm-406 2 1 2zm3 2 1 2zm395 1-1 2zm-390 2 1 2zm7 4 1 2zm367 3-1 2zm-88 31 2.5.5-2.5.5zm-182 1 2.5.5-2.5.5zm177 0 2.5.5-2.5.5zm-172 1 2.5.5-2.5.5zm166 0 2.5.5-2.5.5zm-160 1 3.5.5-3.5.5zm154 0 2.5.5-2.5.5zm-147 1 3.5.5-3.5.5zm140 0 3.5.5-3.5.5zm-132 1 3.5.5-3.5.5zm124 0 3.5.5-3.5.5zm-115 1 5.5.5-5.5.5zm104 0 5.5.5-5.5.5zm-91 1 9.5.5-9.5.5zm74 0 9.5.5-9.5.5z" />
+                                    <path fill="#fff" stroke="#fff"
+                                        d="m372.5 96 39.5.5-39.5.5zm206 0 45.5.5-45.5.5zm-241 1 19.5.5-19.5.5zm304 0 19.5.5-19.5.5zm-328 1 13.5.5-13.5.5zm358 0 12.5.5-12.5.5zm-377 1 11.5.5-11.5.5zm397 0 9.5.5-9.5.5zm-412 1 9.5.5-9.5.5zm428 0 7.5.5-7.5.5zm-441 1 7.5.5-7.5.5zm454 0 6.5.5-6.5.5zm-465 1 6.5.5-6.5.5zm477 0 5.5.5-5.5.5zm-488 1 6.5.5-6.5.5zm499 0 5.5.5-5.5.5zm-508 1 5.5.5-5.5.5zm518 0 4.5.5-4.5.5zm-526 1 4.5.5-4.5.5zm534 0 4.5.5-4.5.5zm-542 1 4.5.5-4.5.5zm550 0 3.5.5-3.5.5zm-556 1 3.5.5-3.5.5zm562 0 3.5.5-3.5.5zm-567 1 2.5.5-2.5.5zm573 0 2.5.5-2.5.5zm-578 1 2.5.5-2.5.5zm584 0 2.5.5-2.5.5zm-589 1 2.5.5-2.5.5zm-4 1 2.5.5-2.5.5zm602 0 2.5.5-2.5.5zm-606 1 2.5.5-2.5.5zm-4 1 2.5.5-2.5.5zm-10 3 2.5.5-10.5 3.5v-1zm640 0 2.5.5-2.5.5zm-654 5 1.5.5-3.5 1.5v-1zm-5 2 1.5.5-3.5 1.5v-1zm-7 3 1.5.5-5.5 2.5v-1zm704 3 3.5 1.5-1.5.5zm7 3 3.5 1.5-1.5.5zm-727 2-1 2-4 2 1-2zm-9 5-1 2-2 1 1-2zm-5 3-1 2zm762 0 5.5 3.5-1.5-.5q-4-.5-4-3Zm-765 2-1 2-6 4 2-3zm774 3 3.5 2.5-1.5-.5zm-783 3-1 2zm788 0 3.5 2.5-1.5-.5zm-791 2-2 3zm796 1 1 2zm-800 2-2 3zm803 0 1 2zm3 2 1 2zm-810 1-4 5-7 6 6-7zm813 1 5.5 4.5-2.5-1.5zm7 5 2 3zm4 3 8.5 7.5-4.5-3.5zm-837 2-16 17zm847 6 7 8zm9 8 20.5 21.5-8-7zm-873 4-5.5 6.5-7.5 9.5 2.5-3.5zm-14 17-1.5 2.5-2.5 3.5 1.5-2.5zm908 2 4 5zm-913 5-1 2zm918 1 8.5 10.5-3-2zm-920 2-1 2zm-2 3-1 2zm-2 3-.5 1.5-1.5 2.5.5-1.5zm933 4 1 2zm-936 1-.5 1.5-1.5 2.5.5-1.5zm938 2 3.5 4.5-2-1zm-942 5-.5 1.5-3.5 6.5.5-1.5zm946 1 1 2zm2 3 2.5 3.5-2-1zm3 5 2.5 3.5-2-1zm-957 2 .5 1.5-4.5 8.5-.5-1.5zm962 7 7.5 14.5h-1zm-968 6 .5 1.5-1.5 2.5-.5-1.5zm-2 5 .5 1.5-1.5 2.5-.5-1.5zm979 7 1.5 3.5h-1zm3 7 1.5 3.5h-1zm3 8 1.5 3.5h-1zm4 11 1.5 5.5h-1zm3 10 .5 2.5h-1zm-1006 2 .5 2.5H7zm1007 2 .5 2.5h-1zm1 4 .5 2.5h-1zm-1010 4 .5 2.5H5zm1011 0 .5 2.5h-1zm1 4 .5 3.5h-1zm-1013 1 .5 3.5H4zm1014 4 .5 3.5h-1zm-1015 2 .5 3.5H3zm1016 3 .5 3.5h-1zm-1017 4 .5 4.5H2zm1018 2 .5 4.5h-1zm-1019 7 .5 5.5H1zm1020 0 .5 4.5h-1zm1 8 .5 6.5h-1zM.5 354l.5 10.5H0zm1023 8 .5 10.5h-1zm0 55 .5 8.5h-1zM.5 426l.5 26.5H0zm1022 5 .5 5.5h-1zm-1 9 .5 3.5h-1zm-1 7 .5 3.5h-1zm-1 6 .5 2.5h-1zm-1 5 .5 2.5h-1zm-1 5 .5 2.5h-1zm-1016 1 .5 13.5H1zm1012 15 .5 2.5h-1zm-1011 5 .5 10.5H2zm1 16 .5 7.5H3zm1002 4 .5 1.5-1.5 2.5-.5-1.5zm-2 5 .5 1.5-1.5 2.5-.5-1.5zm-999 4 .5 6.5H4zm996 3 .5 1.5-1.5 2.5-.5-1.5zm-995 7 .5 6.5H5zm1 10 .5 5.5H6zm983 6-.5 1.5-2.5 4.5.5-1.5zm-982 2 .5 5.5H7zm978 5-.5 1.5-1.5 2.5.5-1.5zm-977 3 .5 4.5H8zm974 2-.5 1.5-3.5 5.5.5-1.5zm-973 5 .5 4.5H9zm968 3-1 2zm-2 3-1.5 2.5-2.5 3.5 1.5-2.5zm-965 1 .5 3.5h-1zm1 6 .5 3.5h-1zm959 0-1.5 2.5-3.5 4.5 2.5-3.5zm-958 6 .5 3.5h-1zm952 2-3 4zm-951 3 .5 3.5h-1zm947 2-4 5zm-946 4 .5 2.5h-1zm941 2-27 28-15 12 3-4q22.2-15.3 39-36Zm-940 3 .5 2.5h-1zm1 4 .5 3.5h-1zm1 5 .5 2.5h-1zm1 4 .5 2.5h-1zm4 16 .5 2.5h-1zm889 8-2 3-3 2 2-3zm-7 5-1 2zm-878 1 .5 2.5h-1zm875 1-1 2zm-3 2-1 2zm-3 2-1 2zm-3 2-1 2-2 1 1-2zm-5 3-1 2-4 2 1-2zm-11 6-1 2-9 4v-1zm-19 9 1.5.5-3.5 1.5v-1zm-5 2 1.5.5-3.5 1.5v-1zm-5 2 1.5.5-3.5 1.5v-1zm-24 8 2.5.5-2.5.5zm-7 2 2.5.5-2.5.5zm-3.5 1 2 .5-2.5 3.5-.5-1.5zm-770.5 5 1.5 3.5h-1zm767 4 .5 1.5-2.5 4.5-.5-1.5zm-764 3 2.5 5.5h-1zm753 20-.5 1.5-3.5 6.5.5-1.5zm-739 9 3.5 5.5-2-1zm733 2-.5 1.5-2.5 4.5.5-1.5zm-728 7 2.5 3.5-2-1zm724 0-.5 1.5-1.5 2.5.5-1.5zm-721 5 2.5 3.5-2-1zm718 0-.5 1.5-1.5 2.5.5-1.5zm-715 5 2.5 3.5-2-1zm712 0-1 2zm-2 3-.5 1.5-10.5 15.5 1.5-2.5zm-707 2 4.5 6.5-2-1zm5 8 1 2zm2 3 1 2zm2 3 6.5 8.5-3-2zm686 2-2 3zm-3 4-1.5 2.5-3.5 4.5 2.5-3.5zm-676 4 2 3zm3 4 2 3zm667 0-2.5 3.5-4.5 5.5 3.5-4.5zm-664 4q20.5 27 45.5 49.5l-27-26zm656 6-4 5zm-5 6-7 8zm-8 9-24 25zm-26 25-7 8zm-570 4 6 7zm561 4-4 5zm-553 3 4 5zm547 2-3 4zm-541 3 3 4zm536 1-3 4zm-531 3 10.5 8.5-2.5-1.5q-6-2.5-8-7Zm526 1-2 3zm-4 3-2 3zm-4 3-1 2zm-506 2 5.5 4.5-2.5-1.5zm503 0-2 3-3 2 2-3zm-496 5 1 2zm489 0-1 2zm-486 2 1 2zm483 0-1 2zm-480 2 6.5 4.5-1.5-.5q-4.6-1.2-5-4Zm477 0-1 2-5 3 1-2zm-469 5 3.5 2.5-1.5-.5zm461 0-1 2-2 1 1-2zm-456 3 3.5 2.5-1.5-.5zm451 0-1 2-2 1 1-2zm-446 3 5.5 3.5-1.5-.5q-4-.5-4-3Zm439 1-1 2-4 2 1-2zm-426 6 8.5 4.5-1.5.5-6-3zm398 8 1.5.5-5.5 2.5v-1zm-380 1 3.5 1.5-1.5.5zm7 3 3.5 1.5-1.5.5zm364 0 1.5.5-3.5 1.5v-1zm-5 2 1.5.5-3.5 1.5v-1zm-5 2 1.5.5-3.5 1.5v-1zm-339 2 3.5 1.5-1.5.5zm331 1 1.5.5-3.5 1.5v-1zm-21 7 2.5.5-2.5.5zm-284 1 2.5.5-2.5.5zm7 2 2.5.5-2.5.5zm267 0 2.5.5-2.5.5zm-4 1 2.5.5-2.5.5zm-4 1 2.5.5-2.5.5zm-4 1 2.5.5-2.5.5zm-239 1 2.5.5-2.5.5zm235 0 2.5.5-2.5.5zm-231 1 2.5.5-2.5.5zm227 0 2.5.5-2.5.5zm-222 1 2.5.5-2.5.5zm217 0 2.5.5-2.5.5zm-212 1 2.5.5-2.5.5zm207 0 2.5.5-2.5.5zm-202 1 2.5.5-2.5.5zm196 0 3.5.5-3.5.5zm-190 1 2.5.5-2.5.5zm185 0 3.5.5-3.5.5zm-179 1 2.5.5-2.5.5zm172 0 4.5.5-4.5.5zm-166 1 4.5.5-4.5.5zm159 0 4.5.5-4.5.5zm-151 1 4.5.5-4.5.5zm143 0 4.5.5-4.5.5zm-135 1 5.5.5-5.5.5zm125 0 6.5.5-6.5.5zm-114 1 7.5.5-7.5.5zm101 0 8.5.5-8.5.5zm-86 1 79.5.5-79.5.5z"
+                                        opacity=".353" />
+                                    <path fill="#fff" stroke="#fff"
+                                        d="m412.5 96 36.5.5-36.5.5zm120 0 45.5.5-45.5.5zm-175 1 9.5.5-9.5.5zm272 0 11.5.5-11.5.5zm-302 1 6.5.5-6.5.5zm337 0 6.5.5-6.5.5zm-358 1 4.5.5-4.5.5zm380 0 4.5.5-4.5.5zm-397 1 3.5.5-3.5.5zm414 0 3.5.5-3.5.5zm-429 1 3.5.5-3.5.5zm442 0 3.5.5-3.5.5zm-454 1 2.5.5-2.5.5zm466 0 3.5.5-3.5.5zm-477 1 2.5.5-2.5.5zm488 0 3.5.5-3.5.5zm-498 1 2.5.5-2.5.5zm509 0 2.5.5-2.5.5zm-518 1 2.5.5-2.5.5zm534 1 2.5.5-2.5.5zm-640 33-1 2zm-5 3-1 2zm-12 8-1 2zm-3 2-1 2zm794 1 1 2zm-798 2-1 2zm-4 3-2 3zm811 1 1 2zm-817 4-2 3zm824 1 1 2zm4 3 1 2zm-835 2-17 18zm840 2 1 2zm5 4 3 4zm9 8 13 14zm-875 8-2 3zm-5 6-1 2zm-4 5-1 2zm902 0 3 4zm-907 7-1 2zm913 0 2 3zm4 5 1 2zm3 4 1 2zm3 4 1 2zm8 12 1 2zm-978 97 .5 2.5H3zm-1 8 .5 2.5H2zm1019 9 .5 2.5h-1zm-1020 1 .5 3.5H1zm1021 9 .5 2.5h-1zM.5 365l.5 8.5H0zm1023 8 .5 7.5h-1zM.5 402l.5 23.5H0zm1023 7 .5 7.5h-1zm-1 19 .5 2.5h-1zm-1 9 .5 2.5h-1zM1.5 456l.5 7.5H1zm1 24 .5 3.5H2zm1 16 .5 3.5H3zm1 13 .5 3.5H4zm1 11 .5 2.5H5zm1 10 .5 2.5H6zm971 28-1 2zm-2 3-1 2zm-5 7-1 2zm-3 4-1 2zm-3 4-1 2zm-4 5-2 3zm-5 6-3 4zm-24 24-3 4zm-8 7-1 2zm-5 4-1 2zm-5 4-1 2zm-7 5-1 2zm-3 2-1 2zm-6 4-1 2zm-3 2-1 2zm-5 3-1 2zm-811 104 1 2zm2 3 1 2zm2 3 1 2zm686 2-1 2zm-3 4-1 2zm-678 1 1 2zm2 3 1 2zm673 0-1 2zm-670 4 1 2zm667 0-1 2zm-664 4 1 2zm660 1-1 2zm-656 4 1 2zm652 1-2 3zm-648 4 2 3zm643 2-3 4zm-638 4 2 3zm630 5-7 8zm-623 3 5 6zm605 15-7 8zm-584 6 5 6zm571 6-3 4zm-560 4 2 3zm553 2-2 3zm-547 3 2 3zm541 2-1 2zm-535 3 1 2zm531 0-2 3zm-527 3 1 2zm522 1-1 2zm-4 3-1 2zm-510 2 1 2zm507 0-1 2zm-500 5 1 2zm493 0-1 2zm-490 2 1 2zm487 0-1 2zm-3 2-1 2zm-8 5-1 2zm-10 6-1 2zm-307 48 2.5.5-2.5.5zm16 2 2.5.5-2.5.5zm135 0 2.5.5-2.5.5zm-126 1 3.5.5-3.5.5zm116 0 2.5.5-2.5.5zm-103 1 4.5.5-4.5.5zm89 0 3.5.5-3.5.5z"
+                                        opacity=".996" />
+                                    <path fill="#fe5a17" stroke="#fe5a17"
+                                        d="m339.5 325 20 1 23 6q23.3 10.2 38.5 28.5l9.5 12.5q2.3.8 1.5-1.5l18.5-20.5q12.7-11.8 30-19l22-6 20-1 1 1h10l11 2 18 6q25.1 11.4 41.5 31.5 14.6 16.9 22 41l5 25v23l-6 32q-5.8 19.7-15 36-22.3 38.7-54.5 67.5l-38 31-60 39-19 6h-14l-12-3-10-5-57-37q-33.1-22.9-59.5-52.5-24.4-26.1-40-61l-8-22-4-18-1-17-1-1v-14l1-1v-9l2-11 7-22q11.3-24.7 30.5-41.5 14.7-12.8 35-20l15-4 16-1z" />
+                                    <path fill="#fff" stroke="#fff"
+                                        d="M449.5 96h82l1 1h96l1 1h34l1 1h21l1 1h16l1 1h12l1 1 33 2 1 1h8l1 1h6l29 5 24 6 27 9 41 19q40.7 22.8 70.5 56.5 33.8 37.2 52 90l8 29 4 23 1 17 1 1v19l1 1v27l-1 1-1 27-1 1v7l-3 17-8 30-10 26q-25.2 55.3-67.5 93.5-47.4 44.3-119.5 63-33.3 79.5-91.5 135-60.7 60.3-152 90l-50 12-19 2-1 1h-8l-1 1h-9l-1 1h-13l-1 1h-83l-1-1h-13l-1-1-18-1-40-7q-39.6-8.9-73-24-68.3-31.2-116.5-82.5-67.4-70.6-98-178l-10-44-4-31-1-1v-7l-1-1-1-18-1-1-1-23-1-1v-15l-1-1v-23l-1-1-1-81 1-1 1-31 1-1v-7l1-1 2-18q6.1-30.9 17-57 23.8-55.7 66.5-92.5 25.9-22.6 59-38l35-13 30-7 21-2 1-1h8l1-1h9l1-1 38-2 1-1h17l1-1 55-1 1-1h81zM425 160l-1 1h-62l-1 1-51 1-1 1h-16l-1 1-36 2-1 1-31 3q-56 11-91 42-32 27-50 68l-9 25-4 16-4 23-1 25-1 1 1 87 1 1v20l1 1 1 27 1 1v10l1 1 3 31 11 54q26 93 84 154 39 41 94 66l37 14 27 7 28 5 16 1 1 1h12l1 1h83l1-1h12l1-1h8l1-1h7l13-3h5l33-8q76-24 128-74 29-29 52-64l24-45 10-25 3-12 2-2 18-2 22-5 25-9q33-14 58-37 30-27 49-66 10-22 16-47l3-17v-8l1-1v-13l1-1-1-47-1-1-2-21-5-21q-14-46-42-77-24-28-58-46-21-11-44-18l-38-9-21-2-1-1h-8l-1-1-21-1-1-1-28-1-1-1h-20l-1-1h-30l-1-1z" />
+                                    <path fill="#fff" stroke="#fff"
+                                        d="M383.5 234h228l1 1 64 1 1 1h16l1 1 38 2 1 1 19 2 26 6 25 9q31.6 13.4 52.5 37.5 18 21 26 52l3 16v8l1 1v45l-5 26q-5.4 17.6-14 32-11.8 19.7-28.5 34.5-22.5 20.5-55 31l-24 5-52.5 1-10 43.5-7 21-17 37q-22.8 42.7-57.5 73.5-35.3 31.7-87 47l-31 7h-6l-8 2h-9l-1 1h-14l-1 1h-63l-1-1h-15l-1-1-17-1-27-5-43-14Q247 739 217 705.5q-46.7-53.3-65-135l-8-46-2-28-1-1v-13l-1-1-1-42-1-1v-77l1-1v-10l3-17 9-27q10.4-22.1 28.5-36.5l23-14 19-7 16-4 18-2 1-1h7l1-1h7l1-1 33-2 1-1 39-1 1-1h36zM727 318l-12 5q-7 4-8 13v116l3 8q5 7 17 9h16l20-4 10-4 11-7q12-9 18-23l4-11 2-10v-9l1-1q1-39-17-58-20-25-65-24Zm-393 7-1 1-12 1-17 5q-17 6-29 17-19 15-30 37l-8 20-5 25v24l1 1 1 14 3 14 8 23q18 38 46 68 28 29 63 52l50 32 18 7h19l16-5q50-29 93-65 34-29 58-69l13-27 7-23 2-10v-7l1-1v-30l-4-20q-8-29-26-47-13-15-31-25l-20-8-21-4h-21l-20 4q-20 7-34 19l-23 25-7-9q-15-20-38-31l-23-7q-6 2-7-1z" />
+                                </svg>
+                            </span>
+                            <span class="social-name">Ko-fi</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://en.pronouns.page/@msaku" target="_blank" rel="noopener noreferrer"
+                            aria-label="pronouns page profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 650" width="24" height="24">
+                                    <path fill="#c71585"
+                                        d="M396.52 174.35c1.35-2.4.21-4.35-2.54-4.35l-48.2.03c-2.75 0-6.15 1.94-7.54 4.31l-118.1 199.77c-16.48 27.15-39.48 33.15-61.58 30.47-37.94-4.6-58.34-32.45-58.34-69.54 0-37.25 30.31-67.56 67.56-67.56h75c2.75 0 6.12-1.95 7.48-4.34l27.03-47.2c1.37-2.39.23-4.34-2.52-4.34h-107c-68.06 0-123.44 55.37-123.44 123.44 0 32.89 12.85 68.36 36.22 91.54 23.03 22.84 53.8 31.21 86.64 31.89 18.54.21 69.46-.21 93.33-42.68 26.73-47.57 136-241.44 136-241.44m175.42 70.09c-23.03-22.84-53.8-31.21-86.64-31.89-18.54-.21-69.46.21-93.33 42.68-26.72 47.55-136 241.42-136 241.42-1.35 2.4-.21 4.35 2.54 4.35l48.2-.03c2.75 0 6.15-1.94 7.54-4.31l118.1-199.77c16.48-27.15 39.48-33.15 61.58-30.47 37.94 4.6 58.34 32.45 58.34 69.54 0 37.25-30.31 67.56-67.56 67.56h-75c-2.75 0-6.12 1.95-7.48 4.34l-27.03 47.2c-1.37 2.39-.23 4.34 2.52 4.34h107c68.06 0 123.44-55.37 123.44-123.44 0-32.87-12.85-68.34-36.22-91.52" />
+                                </svg>
+                            </span>
+                            <span class="social-name">Pronouns Page</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" href="https://www.imood.com/users/cue" target="_blank" rel="noopener noreferrer"
+                            aria-label="imood profile (opens in new tab)">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="24" height="24">
+                                    <path fill="#fcfd16" stroke="#fcfd16"
+                                        d="M53 20h12q-.7 3.1 2 2.5V34q-3.1-.7-2.5 2H53q.8-3.1-2-2.5V22q3 1 2-2Zm3 2v5h2v-5zm4 0v5h2v-5zm-6 9q-1 3 2 2 1-3-2-2Zm8 0q-1 3 2 2 1-3-2-2Zm-5 2v1h5z" />
+                                    <path fill="#fbfdfc" stroke="#fbfdfc"
+                                        d="m107.5 11 1.5 4.5-1 1v15l1 2-1.5 4.5zM8 12q3.7-1.2 2 4-3.7 1.2-2-4Zm6 0q3.7-1.2 2 4-3.7 1.2-2-4Zm15.5 4 1 2q-2.8.7-1-2ZM41 16l2 .5-2 1zm14.5 0 5.5 1.5-7.5.5v-1zm24 0 2.5.5-2.5.5zm17 0h2q5.4-1.9 4.5 1.5l-1.5-.5-6 2 .5-1.5zm32 0h2l7.5.5-10 1.5zm38 0 3.5.5-3.5.5zm7 0 1 2zm12 0 1.5 2.5-2-1zm-92 3-1 2zm33 0-1.5 2.5-1.5 2.5-.5-3zM8 20q2.7-1.1 2 1.5v14L8 36v-8.5l1-1zm6 0q2.7-1.1 2 1.5 3.5 1.5 1 3v8l1 1-1 2.5-3-1.5 1-4-1-2v-2l1-2-1-3zm35.5 0 1.5.5-2 .5q1 3-2 2-1.1-2.7 1.5-2zm90 0q2.4 2.1 1.5 7.5h-1zm-59 1 2.5 1q1.1 2.7-1.5 2h-2l-4.5-.5q4.3.3 5.5-2.5Zm51 0 4 2 1.5-.5-1.5 1.5H129l.5-2 2 1zm17 0 3 2v-2q4.3 1.8 1.5 3.5l-.5 9.5-3-1-2 1-1-2h5.5v-8l-6-.5zm11 0 2.5 1-1 3.5v2l1 3v2l-1.5 3.5-1.5-.5.5-1.5-2.5-.5 3-1-2-1q2.2-1.3 1-6l-.5-1.5 1.5-.5zm-133 1q4.8-1.3 3.5 2l-2 .5 1.5 2.5-1.5-.5 1 7-1.5 2.5-1.5-3.5 2-7-3-2zm10 0 5.5 2.5-1 2 1 2v4L40.5 36 40 24l-4 .5 1 3h-1l-.5-2.5-.5 6.5h1l.5-2.5 1.5 4.5-3.5 1.5-.5-2.5v-9l1.5-.5zm61 0h2l3.5 1.5-7 .5v8h5v2l-3.5-1-1.5.5-1-9zm73 0 3.5 1.5v9l-1 1 .5 3.5-3.5-4.5 3-1q.8-4.2-2-5h2q.8-2.2-1.5-1.5l-2.5-1.5zm10 0 2 1 2.5-1q2.1 5 1 14-4 1.4-2-5.5v-2l1-3q-1.4-2.6-6-2zm-14 1 1.5 1.5V36l-2-.5zm-143 1 .5 3.5h-1z" />
+                                    <path fill="#fbfdfc" stroke="#fbfdfc"
+                                        d="M46 24q4.5-1.5 3 3l-2 .5 2 1-1 3 1 2-1 2.5-2-.5zm42.5 0 .5 3.5h-1zm103 0 .5 11.5h-1l-1-3zm-116 1 .5 7 4.5 1 2-1-1 2-6.5-2.5zm70 0 .5 5.5h-1zm3 2 .5 2.5-2-1zm32 0 1.5 6.5-1.5 2.5-2.5-3.5 2-.5zm-157 2 .5 6.5h-1zm65 0 .5 2.5-1 3.5-2-.5zm52 0 .5 5.5-2 1zM112 32q3-1.2 2 2.5l-2 1zm7.5 0 .5 3.5h-1zm4 0 3 4 1.5.5-1.5.5-3.5-2.5zm6 0 3 1 1.5-.5q.9 3-3.5 1.5zm-76 6 9.5.5-9.5.5zm51 0q2.3-.7 1.5 1.5zm-23 1 2.5.5-2.5.5zm15 0 2.5.5-2.5.5zm32 0 3.5.5-3.5.5zm5 0 4.5.5-4.5.5z" />
+                                    <path fill="#fcfefc" stroke="#fcfefc"
+                                        d="M0 0h199.5l.5.5V50H.5l-.5-.5zm103 11v5h-6l-1 2-2 1-3 5q-2 10 2 13l3 1q4 1 6-1 4-1 6 1l1-4-1-2V17l1-1-1-2v-3zM8 12v4h8v-4zm22 4-1 2-4 1-2-1-4 1v18l4 1q2-2 1-8v-2q-1-7 2-6l-1 2h4q2-1 1 2v11h5l-1-1 3-1-1-1h2l-1-5-1 3h-1q-2-7 2-8l3 1v11l2-1v2l5-1q2 1 1-2h3v2q4-1 2 3h10l1-1q2 1 1-2h2v-2h2V23q-3 0-2-3h-2l-1-3-2 1-5-1h-2q-3-1-2 3l-4 1h2v1l-4-1q-1 3 2 2v1q-4 1-3-2-5-3-3-6-3-1-2 2-5-1-6 2l-4-1zm50 0v1h2zm49 0v3l-6 2 1 4-1 10 8 3q6 1 9-2l2-4 1 4 5 2h5l5-4h2v2l2-1v2l5-1h1V23l2-1-1 2 4 1-1 3 1 4-1-1-2 3q2 4 4 1l-1 2h5l1-4 2 3 1-2q-2-2-1-6h-1q2 5-1 4l-1-4 1-5 5 1q2 1 0 3l1 3-1 6 5 1 1 2 1-5v2h1V24l-1 8-2-11-3-5-1 2q-6-1-8 2l-2-3-7 2-2-1h-4v4h-3l1 2h-2l-4-6q-8 1-7-1h-1q1 3-1 2l-3 5-2-3q-2-4-9-3l7-1-7-1zm38 0v1h3zM10 18q1 3-2 2l1 7-1 1v8l6 1 1-2 2 1 1-2-1-1v-8q2-2-1-3 1-3-2-2v-2zm67 0-2 1q-2 3-4 2l1 2-2 4v4l2 3-1 2 2-1 4 3h5l6-3 1-3-1-3 1-4q-4-2-1-3-3-5-11-4Zm-40 7-1 3h1zm-9 1-2 7 2 3 1-2zm84 6v4l2-1v2q5 1 6-1v-4zm-7 6 1 2q1-3-1-2Zm-23 1v1h2zm15 0v1h2zm32 0v1h3zm5 0v1h4z" />
+                                    <path fill="#fcfefc" stroke="#fcfefc"
+                                        d="m99.5 17 2.5.5-2.5.5zm-21 4 1.5.5-3.5 1.5v-1zm54 0 7.5 3 1 4.5-1 3.5-6 2-.5-2H128v-8l8-.5-3.5-1.5-2 1v-1zm17 0 2.5 1.5-1.5.5zm-112 1 2.5.5-2.5.5zm38 2H84v8h-8v-6.5zM96 24h7v9l-7-1zm50 0h6v8h-6zm3 3-2 2 2 1zm4.5-3 1.5 5.5-1.5 2.5zm-138 2v3q-3-1.5 0-3Zm146 1 .5 2.5h-1zm-12 6 2.5.5-2.5.5z" />
+                                    <path fill="#383838" stroke="#383838"
+                                        d="m13.5 13 .5 1.5-3.5 1.5v-1q3.5 1 3-2Zm13 5 3.5.5-3.5.5zm12 0 3.5.5-3.5.5zm39 0 3.5.5-3.5.5zm20 0 3.5.5-3.5.5zm34 0 3.5.5-3.5.5zm17 0 3.5.5-3.5.5zm22 0 2.5.5-2.5.5zm11 0 3.5.5-3.5.5zm-171 1 .5 17.5h-1zm21 0 1 2zm106 0 1.5 3.5h-1zm8 0-2 3zm-116 2 1 2zm47 0-1 2zm6 0 1 2zm47 0-1 2zm55 0 1 2zm-18 1-.5 1.5-.5 13.5-.5-13.5zm-121 2 .5 12.5h-1zm129 0 .5 12.5h-1zm-87 1 .5 4.5h-1zm57 0 .5 4.5h-1zm-29 7 2.5.5-2.5.5zm-20 1 1 2zm42 0q2.6-.8 1.5 2.5h-1zm16 0-1 2zm-68 1-1 2z" />
+                                    <path fill="#040204" stroke="#040204"
+                                        d="m104 12 3 .5V37q-3.8 1.5-3-1.5l-1.5.5-7 1-3.5-3.5-1-7 3.5-6.5 8-1 1.5.5zm-6 9-4 4q-1 7 3 10l6-1 1-1V23q-1-3-6-2Zm-88-8q4.1-1.3 3 2-4.1 1.3-3-2Zm43 5h12v2h2q-.7 3.1 2 2.5V34h-2v2q-3.1-.7-2.5 2H53v-2h-2q.8-3.1-2-2.5V22h2zm0 2q1 3-2 2v12q3-1 2 2h12q-1-3 2-2V23q-3 0-2-3zm-42-1 2 .5V37l-2-.5zm8 0q3.7-1.5 3 1.5l1.5-.5 7-1 3 2q2.3-3.2 9-2l2.5 2.5V37l-2-.5v-13Q42 20 36.5 21L33 23l1 4.5v2q1.5 6-1.5 7.5l-1.5-.5v-14q-1.2-2.7-6.5-1.5L22 23.5V37l-3-.5zm57.5 0q7.3-1.2 9.5 2.5 2.5 3.5 1 11-1.5 6-10.5 4.5L73 34.5l-2-8 1-4 2.5-2.5zm.5 2-3 4q-1 6 1 9l7 1 3-4-1-8q-1-4-7-2Zm52.5-2q6.8-1.7 8.5 1.5l-.5 1.5-5-2-4.5 2.5-1 9q1.3 4.7 8.5 3.5l2.5-1q1.1 2.7-1.5 2-1.2 2.3-6 1l-4.5-2.5-2-8 3.5-6.5zm17 0q8.8-1.7 10.5 3.5l1 8-3.5 5.5-7 1-4.5-3.5-1-9zm3.5 1-2 1-4 5 1 7q1 3 8 2l3-6-1-5zm13-1q2.7-1.1 2 1.5l1.5-.5 8-1 3 2q2.3-3.2 9-2l2.5 4.5V37l-3-.5v-14q-1-2.5-5.5-1.5l-3.5 2.5v13l-2 .5V24.5l-2.5-3.5q-5.8-.8-7.5 2.5v13l-2 .5z" />
+                                    <path fill="#040204" stroke="#040204"
+                                        d="M56 22h2v5h-2zm4 0h2v5h-2zm-6 9q3.1-.7 2.5 2H62q-1-3 2-2 1.1 2.7-1.5 2-1.2 2.2-6 1L54 33zm61 2q4.9-1.6 3 4-4.9 1.6-3-4Z" />
+                                    <path fill="#acadac" stroke="#acadac"
+                                        d="m104.5 11 2.5.5-2.5.5zm-94 1 3.5.5-3.5.5zm3 7 .5 17.5h-1zm61 0-2 3zm88 0 .5 17.5h-1zm10 2 1 2zm-149 1-1 2zm7 1 .5 13.5h-1zm147 0 .5 13.5h-1zm-135 2 .5 11.5h-1zm99 0 .5 5.5h-1zm-57 1 .5 3.5h-1zm74 0 .5 2.5h-1zm-44 6 .5 4.5h-1zm4 0 .5 4.5h-1zm10 0 1 2zm14 1 1 2zm-45 1 2.5.5-2.5.5zm34 0 3.5.5-3.5.5zm25 0-1 2zm-79 3 4.5.5-4.5.5zm19 0 3.5.5-3.5.5zm35 0 3.5.5-3.5.5zm17 0 3.5.5-3.5.5z" />
+                                    <path fill="#f1f2d9" stroke="#f1f2d9"
+                                        d="m103.5 12 .5 7-2-.5zm59 6 3.5.5-3.5.5zm-124 3 3.5 1q1 3-2 2 1.1-2.7-1.5-2zm60 0 2.5.5-2.5.5zm83 0 2.5.5-2.5.5zm-78 1 .5 9.5h-1zm-80 1-.5 1.5-.5 12.5-.5-12.5zm166 1 .5 12.5h-1zm-115 2 .5 2.5h-1zm53 0 .5 2.5h-1zm-52 6 1 2zm50 2 1 2z" />
+                                </svg>
+                            </span>
+                            <span class="social-name">imood</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div><!-- /wrapper -->
+        </section>
+
+        <!-- ============================================================
+           CONTACT SECTION
+           A clean list of contact methods with icons.
+           ============================================================ -->
+        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+            <div class="wrapper">
+                <h2 id="contact-heading">Contact</h2>
+
+                <!--
+               - Change href="mailto:..." to your email address
+               - Change href="https://..." to your link
+               - Update the aria-label for each
+               - Add/remove <li> items as needed
+               - "contact-purpose" text is optional — remove if not needed -->
+                <ul class="contact-list" role="list">
+
+                    <li class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2" />
+                                <path d="m22 6-10 7L2 6" />
+                            </svg>
+                        </span>
+                        <a class="contact-link" href="mailto:hello@cue.cat?subject=%5Binfo%5D&body=Hi%20cue,%0D%0A...">hello@cue.cat</a>
+                    </li>
+
+                    <li class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2" />
+                                <path d="m22 6-10 7L2 6" />
+                            </svg>
+                        </span>
+                        <a class="contact-link" href="mailto:business@cue.cat?subject=%5Binfo%5D%20-%20Business&body=%5BYour%20inquiry%5D">business@cue.cat</a>
+                        <span class="contact-purpose">for business inquiries</span>
+                    </li>
+
+                    <li class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2" />
+                                <path d="m22 6-10 7L2 6" />
+                            </svg>
+                        </span>
+                        <a class="contact-link" href="mailto:research@cue.cat?subject=%5Binfo%5D%20-%20Research&body=Dear%20Cue%20Software%20Research%20Labs,%0D%0AI%20found....%20%5Bfindings%5D">research@cue.cat</a>
+                        <span class="contact-purpose">for research, findings, reports</span>
+                    </li>
+
+                    <li class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2" />
+                                <path d="m22 6-10 7L2 6" />
+                            </svg>
+                        </span>
+                        <a class="contact-link" href="mailto:media@cue.cat?subject=%5Binfo%5D%20-%20Media&body=Dear%20Cue%20Softwares%20Press%20Office,%0D%0A%5BYour%20inquiry%5D">media@cue.cat</a>
+                        <span class="contact-purpose">for media inquiries</span>
+                    </li>
+
+                    <li class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                            </svg>
+                        </span>
+                        <a class="contact-link" href="https://cue.cat" target="_blank"
+                            rel="noopener noreferrer">cue.cat</a>
+                    </li>
+
+                </ul>
+            </div><!-- /wrapper -->
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         Layout: brand (left) | copyright (center) | links (right)
+         With a legal/disclaimer bar at the very bottom.
+         ============================================================ -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-inner wrapper">
+
+            <!-- Left: site icon + name -->
+            <div class="footer-brand">
+                <img src="/assets/icons/header/cuewieIcon.webp" alt="Cuewie icon" width="28" height="28" aria-hidden="true">
+                <span>cue software</span>
+            </div>
+
+            <!-- Center: site tagline + copyright year (auto-updated by JS) -->
+            <div class="footer-copy">
+                <p class="footer-tagline">/ᐠ. ｡.ᐟ\ cue's kitty house ♡</p>
+                <!-- The <span id="year"> is filled in by script.js automatically -->
+                <p>&copy; <span id="year"></span> cue.cat</p>
+            </div>
+
+            <!-- Right: two columns of useful links -->
+            <nav class="footer-links" aria-label="Footer links">
+
+                <div class="footer-col">
+                    <p class="footer-col-title">My Socials</p>
+                    <ul role="list">
+                        <li>
+                            <a href="https://cue.cat/#findme" target="_blank" rel="noopener noreferrer">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="14" height="14">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4zm4-7v3m4-3v3m4-3v3" />
+                                </svg>
+                                Cue Socials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@mafusaku" target="_blank" rel="noopener noreferrer">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" width="14" height="14">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4zm4-7v3m4-3v3m4-3v3" />
+                                </svg>
+                                Medium Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <!-- <p class="footer-col-title">Other Links</p>
+                    <ul role="list">
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"
+                                    height="14" aria-hidden="true">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                </svg>
+                                Pronouns Page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"
+                                    height="14" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                </svg>
+                                Marshmallow-Qa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"
+                                    height="14" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                                imood
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
+
+            </nav>
+        </div><!-- /footer-inner -->
+
+        <!-- Bottom legal bar -->
+        <div class="footer-legal">
+            <div class="wrapper">
+                <p>
+                    &copy; <span id="year-legal"></span> Scarlett / cue.cat &mdash;
+                    All rights reserved. Some images, graphics, and logos displayed on this website are the property of their respective owners. <br>
+                    Made with ♡ by cue.
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="/script.js"></script>
+
+</body>
 </html>
