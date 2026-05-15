@@ -2,261 +2,211 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ─── 1. COPYRIGHT YEAR ─────────────────────────────────────── */
-  const year = new Date().getFullYear();
-  ['year', 'year-legal'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = year;
-  });
+  // ── YEAR ─────────────────────────────────────────────────
+  const yr = new Date().getFullYear();
+  document.querySelectorAll('#year, #year-legal').forEach(el => { el.textContent = yr; });
 
+  // ── THEME ─────────────────────────────────────────────────
+  const html      = document.documentElement;
+  const toggleBtn = document.querySelector('.theme-toggle');
 
-  /* ─── 2. THEME TOGGLE ───────────────────────────────────────── */
-  const html   = document.documentElement;
-  const toggle = document.querySelector('.theme-toggle');
-
-  function getTheme() {
-    const saved = localStorage.getItem('color-theme');
-    if (saved === 'dark' || saved === 'light') return saved;
+  function savedTheme() {
+    const s = localStorage.getItem('theme');
+    if (s === 'dark' || s === 'light') return s;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
-  function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    if (toggle) {
-      toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    }
-    localStorage.setItem('color-theme', theme);
+  function applyTheme(t) {
+    html.setAttribute('data-theme', t);
+    if (toggleBtn) toggleBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    localStorage.setItem('theme', t);
   }
 
-  applyTheme(getTheme());
+  applyTheme(savedTheme());
 
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-    });
-  }
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    if (!localStorage.getItem('color-theme')) {
-      applyTheme(e.matches ? 'dark' : 'light');
-    }
+  toggleBtn?.addEventListener('click', () => {
+    applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
 
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
+  });
 
-  /* ─── 3. HEADER SCROLL EFFECT ───────────────────────────────── */
-  const header   = document.querySelector('.site-header');
-  const sentinel = document.createElement('div');
-  sentinel.style.cssText = 'position:absolute;top:10px;left:0;width:1px;height:1px;pointer-events:none;';
-  document.body.prepend(sentinel);
-
+  // ── HEADER SCROLL ─────────────────────────────────────────
+  const header = document.querySelector('.site-header');
   if (header) {
-    new IntersectionObserver(([entry]) => {
-      header.classList.toggle('scrolled', !entry.isIntersecting);
-    }, { threshold: 0 }).observe(sentinel);
+    const obs = new IntersectionObserver(([e]) => header.classList.toggle('scrolled', !e.isIntersecting));
+    const sentinel = Object.assign(document.createElement('div'), {
+      style: 'position:absolute;top:1px;left:0;width:1px;height:1px;pointer-events:none;'
+    });
+    document.body.prepend(sentinel);
+    obs.observe(sentinel);
   }
 
-
-  /* ─── 4. NAME CYCLER ────────────────────────────────────────── */
+  // ── NAME CYCLER ────────────────────────────────────────────
   const cycler = document.querySelector('.name-cycler');
-  const names  = cycler ? [...cycler.querySelectorAll('.name-item')] : [];
+  const items  = cycler ? [...cycler.querySelectorAll('.name-item')] : [];
 
-  if (names.length > 1) {
-    let current = 0;
-    names[0].classList.add('name-active');
+  if (items.length > 1) {
+    // Lock container width to widest name so layout stays stable
+    let maxW = 0;
+    items.forEach(n => {
+      const clone = n.cloneNode(true);
+      Object.assign(clone.style, { visibility:'hidden', position:'absolute', opacity:'1', filter:'none', transform:'none' });
+      document.body.appendChild(clone);
+      maxW = Math.max(maxW, clone.offsetWidth);
+      clone.remove();
+    });
+    if (maxW > 0) cycler.style.minInlineSize = maxW + 'px';
 
-    // Lock the cycler width to the widest name so layout doesn't jump.
-    (function measureWidth() {
-      let max = 0;
-      names.forEach(n => {
-        const clone = n.cloneNode(true);
-        Object.assign(clone.style, { visibility: 'hidden', position: 'absolute', opacity: '1', filter: 'none', transform: 'none' });
-        document.body.appendChild(clone);
-        max = Math.max(max, clone.offsetWidth);
-        document.body.removeChild(clone);
-      });
-      if (max > 0) cycler.style.minInlineSize = max + 'px';
-    })();
+    let cur = 0;
+    items[0].classList.add('is-active');
 
     setInterval(() => {
-      const prev = names[current];
-      current = (current + 1) % names.length;
-      const next = names[current];
+      const prev = items[cur];
+      cur = (cur + 1) % items.length;
+      const next = items[cur];
 
-      prev.classList.remove('name-active');
-      prev.classList.add('name-exit');
+      prev.classList.replace('is-active', 'is-exit');
       prev.addEventListener('transitionend', function h() {
-        prev.classList.remove('name-exit');
+        prev.classList.remove('is-exit');
         prev.removeEventListener('transitionend', h);
-      });
-
-      next.classList.add('name-active');
-    }, 2200);
+      }, { once: true });
+      next.classList.add('is-active');
+    }, 2400);
   }
 
-
-  /* ─── 5. STAT COUNTERS ──────────────────────────────────────── */
-  const counters = [...document.querySelectorAll('.stat-number[data-target]')];
+  // ── STAT COUNTERS ──────────────────────────────────────────
+  const counters = [...document.querySelectorAll('.stat-num[data-target]')];
 
   if (counters.length) {
-    const countUp = (el) => {
+    const countUp = el => {
       const target = +el.dataset.target;
       const suffix = el.dataset.suffix || '';
       if (target === 0) { el.textContent = '0' + suffix; return; }
-      const duration = 1400;
-      const start    = performance.now();
-
-      function frame(now) {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased    = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.round(eased * target) + suffix;
-        if (progress < 1) requestAnimationFrame(frame);
-      }
-
-      requestAnimationFrame(frame);
+      const start = performance.now();
+      const dur   = 1400;
+      (function tick(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const e = 1 - Math.pow(1 - p, 3); // ease-out cubic
+        el.textContent = Math.round(e * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
     };
 
-    new IntersectionObserver((entries, obs) => {
+    const io = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          countUp(entry.target);
-          obs.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        countUp(entry.target);
+        obs.unobserve(entry.target);
       });
-    }, { threshold: 0.4 }).observe(
-      ...counters.length === 1 ? counters : counters
-    );
+    }, { threshold: 0.5 });
 
-    // Re-attach correctly when more than one counter
-    const counterObs = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          countUp(entry.target);
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.4 });
-
-    counters.forEach(c => counterObs.observe(c));
+    counters.forEach(el => io.observe(el));
   }
 
+  // ── WORK MODAL ─────────────────────────────────────────────
+  const modal     = document.getElementById('work-modal');
+  const mImg      = document.getElementById('modal-img');
+  const mTitle    = document.getElementById('modal-title');
+  const mDate     = document.getElementById('modal-date');
+  const mBody     = document.getElementById('modal-body');
+  const mFoot     = document.getElementById('modal-foot');
+  const cards     = [...document.querySelectorAll('.work-card .card-btn')];
+  let   lastTrig  = null;
 
-  /* ─── 6. WORK CAROUSEL ──────────────────────────────────────── */
-  const track    = document.querySelector('.carousel-track');
-  const dotsWrap = document.querySelector('.carousel-indicators');
-  const prevBtn  = document.querySelector('.carousel-btn--prev');
-  const nextBtn  = document.querySelector('.carousel-btn--next');
-  const cards    = track ? [...track.querySelectorAll('.work-card')] : [];
+  const FOCUSABLE = 'a[href],button:not([disabled]),input,textarea,select,[tabindex]:not([tabindex="-1"])';
 
-  if (track && cards.length && dotsWrap) {
-    const dots = cards.map((card, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'carousel-dot';
-      dot.type = 'button';
-      dot.setAttribute('aria-label', `Go to card ${i + 1}`);
-      dot.addEventListener('click', () => {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-      });
-      dotsWrap.appendChild(dot);
-      return dot;
-    });
+  function trapFocus(e) {
+    const els = [...modal.querySelectorAll(FOCUSABLE)].filter(el => !el.closest('[hidden]'));
+    const first = els[0];
+    const last  = els[els.length - 1];
+    if (e.key !== 'Tab') return;
+    if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+    else            { if (document.activeElement === last)  { e.preventDefault(); first.focus(); } }
+  }
 
-    const visible = new Set();
+  function openModal(card) {
+    const btn  = card.querySelector('.card-btn');
+    const img  = card.querySelector('.card-thumb img');
+    const desc = card.querySelector('.card-desc');
+    const url  = card.dataset.linkUrl;
+    const lbl  = card.dataset.linkLabel;
 
-    new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        const i = cards.indexOf(e.target);
-        if (i === -1) return;
-        e.isIntersecting ? visible.add(i) : visible.delete(i);
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('is-active', visible.has(i));
-        dot.setAttribute('aria-current', visible.has(i) ? 'true' : 'false');
-      });
-      syncBtns();
-    }, { root: track, threshold: 0.5 }).observe(...cards.length === 1 ? cards : []);
+    mImg.src           = img ? img.src : '';
+    mImg.alt           = '';
+    mTitle.textContent = card.querySelector('.card-cname')?.textContent || '';
+    mDate.textContent  = card.querySelector('.card-cdate')?.textContent || '';
+    mBody.innerHTML    = desc ? desc.innerHTML : '';
+    mFoot.innerHTML    = '';
 
-    const cardObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        const i = cards.indexOf(e.target);
-        if (i === -1) return;
-        e.isIntersecting ? visible.add(i) : visible.delete(i);
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('is-active', visible.has(i));
-        dot.setAttribute('aria-current', visible.has(i) ? 'true' : 'false');
-      });
-      syncBtns();
-    }, { root: track, threshold: 0.5 });
-
-    cards.forEach(c => cardObs.observe(c));
-
-    function pageWidth() {
-      const cw  = cards[0]?.offsetWidth || 336;
-      const gap = parseInt(getComputedStyle(track).gap) || 20;
-      const pp  = Math.max(1, Math.floor((track.clientWidth + gap) / (cw + gap)));
-      return pp * (cw + gap);
+    if (url) {
+      const a = document.createElement('a');
+      a.href      = url;
+      a.target    = '_blank';
+      a.rel       = 'noopener noreferrer';
+      a.className = 'modal-ext-link';
+      a.innerHTML = `<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>${lbl || 'Visit'}`;
+      mFoot.appendChild(a);
     }
 
-    function syncBtns() {
-      if (!prevBtn || !nextBtn) return;
-      prevBtn.disabled = track.scrollLeft <= 4;
-      nextBtn.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-    }
+    lastTrig = btn;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKey);
 
-    prevBtn?.addEventListener('click', () => track.scrollBy({ left: -pageWidth(), behavior: 'smooth' }));
-    nextBtn?.addEventListener('click', () => track.scrollBy({ left:  pageWidth(), behavior: 'smooth' }));
-    track.addEventListener('scroll', syncBtns, { passive: true });
-    syncBtns();
-
-    track.addEventListener('keydown', e => {
-      const cw  = cards[0]?.offsetWidth || 336;
-      const gap = parseInt(getComputedStyle(track).gap) || 20;
-      if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left:  cw + gap, behavior: 'smooth' }); }
-      if (e.key === 'ArrowLeft')  { e.preventDefault(); track.scrollBy({ left: -(cw + gap), behavior: 'smooth' }); }
+    // Focus first focusable element in modal
+    requestAnimationFrame(() => {
+      const first = modal.querySelector(FOCUSABLE);
+      first?.focus();
     });
   }
 
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKey);
+    lastTrig?.focus();
+    lastTrig = null;
+  }
 
-  /* ─── 7. SCROLL-TRIGGERED ANIMATIONS ───────────────────────── */
-  const animSelectors = [
+  function onKey(e) {
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Tab')    trapFocus(e);
+  }
+
+  cards.forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.closest('.work-card')));
+  });
+
+  modal?.querySelectorAll('[data-modal-close]').forEach(el => {
+    el.addEventListener('click', closeModal);
+  });
+
+  // ── SCROLL REVEAL ──────────────────────────────────────────
+  const revealTargets = [
     '.about-layout',
-    '.stat-card',
+    '.stat-item',
+    '.work-card',
     '.social-link',
     '.contact-item',
     '.footer-col',
   ];
 
-  animSelectors.forEach(sel => {
-    document.querySelectorAll(sel).forEach(el => el.classList.add('animate-on-scroll'));
+  revealTargets.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => el.classList.add('js-reveal'));
   });
 
-  document.querySelectorAll('section > .wrapper > h2, section > .wrapper > .section-label').forEach(el => {
-    el.classList.add('animate-on-scroll');
-  });
-
-  new IntersectionObserver((entries, obs) => {
+  const revealObs = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      obs.unobserve(entry.target);
     });
-  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 })
-    .observe(...(() => {
-      const els = [...document.querySelectorAll('.animate-on-scroll')];
-      return els.length ? els : [document.body];
-    })());
+  }, { rootMargin: '0px 0px -5% 0px', threshold: 0.07 });
 
-  // Separate observer for all animatable elements
-  const animObs = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+  document.querySelectorAll('.js-reveal').forEach(el => revealObs.observe(el));
 
-  document.querySelectorAll('.animate-on-scroll').forEach(el => animObs.observe(el));
-
-}); // end DOMContentLoaded
+});
